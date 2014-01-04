@@ -1,0 +1,46 @@
+body {
+    @include font-size;
+}
+
+p {
+    @include hyphens;
+    @include rem(margin,0 0 $line/2 0);
+}
+
+.lead {
+
+}
+.tagline {
+
+}
+b,
+strong {
+    font-weight: $semibold;
+}
+i,
+em {
+    font-style: italic;
+}
+
+abbr {
+    cursor: help;
+
+    &.acr {
+
+    }
+}
+.amp {
+    font-style: italic;
+}
+
+sup {
+    height: 0;
+    line-height: 1;
+    vertical-align: baseline;
+    position: relative;
+    bottom: .5ex;
+}
+
+
+::-moz-selection { background: blue; color: white; text-shadow: none; }
+::selection { background: blue; color: white; text-shadow: none; }

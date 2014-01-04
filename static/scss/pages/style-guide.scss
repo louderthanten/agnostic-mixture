@@ -1,0 +1,239 @@
+//Compass Imports
+@import "compass";
+
+//Power Moves: Sass Variables and mixins
+@import "settings/variables";
+@import "settings/mixins";
+
+// UI Library Settings
+
+// Fonts
+.primary {
+    * {
+        font-family: $serif;
+    }
+}
+.secondary * {
+    font-family: $sans;
+}
+
+// Colors
+.color1 { background:$dark-grey; }
+.color2 { background: $red; }
+
+
+
+
+//Decent defaults
+section {
+    @include rem(padding, $line*3 0);
+}
+.header {
+    @include rem(padding, $line 0 0 0);
+}
+.logo {
+    @include rem(margin-bottom, $line);
+    max-width: 200px;
+}
+.tagline {
+    @include rem(margin-top, $line);
+}
+nav {
+    clear:both;
+    ul {
+        @include horizontal-list-container;
+
+        > li {
+            @include horizontal-list-item;
+
+            a {
+                display:block;
+                padding-right:$line/2;
+            }
+        }
+    }
+
+}
+.type-sample {
+    p {
+        @include font-size(24, 36);
+        margin-bottom: $line*1.5;
+        letter-spacing: 0.1em;
+    }
+}
+.grids .container {
+
+    hr {
+        clear:both;
+    }
+    div {
+        margin-bottom: $line;
+        height: $line*10;
+        float:left;
+        @include wrap;
+
+        span {
+            display: block;
+            width:100%;
+            height: $line*10;
+        }
+    }
+}
+
+.content {
+    max-width: 40em;
+}
+
+.iconset {
+    ul {
+        list-style: none;
+    }
+}
+
+.scale {
+    max-width: 30em;
+
+    td {
+        padding:0;
+    }
+}
+
+
+//Colour swatches
+.colors {
+    background:#fff;
+}
+.swatch {
+    @include rem(margin, $line/2 $line/2 $line*3 $line/2);
+    @include wrap;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    width: 120px;
+    height: 120px;
+
+    p {
+        position: absolute;
+        bottom:-4.25em;
+        left:0;
+        width:100%;
+    }
+}
+
+
+
+// Grids
+.grids {
+    span {
+        background:$dark-grey;
+    }
+    h2 {
+        clear:both;
+    }
+}
+.three {
+    width:$c3;
+}
+.five {
+    width:$c5;
+}
+.six {
+    width:$c6;
+}
+.folding {
+    &.four,
+    &.five,
+    &.six,
+    &.seven,
+    &.eight {
+        display:none;
+    }
+    &.two {
+         display: block !important;
+        width:$c4*2;
+    }
+    &.three {
+        display: block !important;
+        width:$c3;
+    }
+}
+
+.combined-grid {
+    position:relative;
+    width:100%;
+    padding:0;
+
+    .grid {
+        position: absolute;
+        top:0;
+        left:0;
+        right:0;
+        height:200px;
+        opacity:0.3;
+        padding:0 !important;
+    }
+}
+
+@media only screen and (min-width: $screenSmall) {
+    .iconset {
+        @include wrap;
+        width:$c8*4;
+        float:left;
+    }
+    .folding {
+        &.four{
+            display: block;
+            width:$c4;
+        }
+        &.five {
+            display:block;
+            width:$c5;
+        }
+
+    }
+    .callouts {
+        .callout {
+            @include wrap;
+            float:left;
+            width:$c4*2;
+
+            &:nth-child(odd) {
+                clear:both;
+            }
+        }
+    }
+}
+@media only screen and (min-width: $screenLarge) {
+    .iconset {
+        width:$c6*2;
+    }
+}
+@media only screen and (min-width: $screenXlarge) {
+
+    .folding {
+        &.six {
+            display: block;
+            width:$c6;
+        }
+        &.seven {
+            display:block;
+            width:$c7;
+        }
+        &.eight {
+            display:block;
+            width:$c8;
+        }
+    }
+    .callouts {
+        .callout {
+            width:$c4;
+
+            &:nth-child(odd) {
+                clear:none;
+            }
+            &:nth-child(4n+5) {
+                clear:both;
+            }
+        }
+    }
+}

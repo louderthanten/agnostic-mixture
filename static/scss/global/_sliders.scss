@@ -1,0 +1,35 @@
+.ui-slider {
+    @include wrap;
+    position: relative;
+    text-align: left;
+    height:rem($line);
+}
+.ui-slider .ui-slider-handle {
+    position: absolute;
+    z-index: 2;
+    width: rem($line);
+    height: rem($line);
+    cursor: pointer;
+    outline: none;
+    top:0;
+}
+.ui-slider .ui-slider-handle:first-of-type {
+    margin-right: rem($line*-1);
+}
+.ui-slider .ui-slider-handle:last-child {
+    margin-left: rem($line*-1);
+}
+
+.ui-slider .ui-slider-range {
+    position: absolute;
+    z-index: 1;
+    display: block;
+}
+
+.ui-slider-horizontal .ui-slider-range-min {
+    left: -1px;
+}
+
+.ui-slider-horizontal .ui-slider-range-max {
+    right: -1px;
+}

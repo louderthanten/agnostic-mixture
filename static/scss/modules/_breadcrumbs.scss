@@ -1,0 +1,12 @@
+.breadcrumbs {
+	//@extend .small;
+	@include rem(padding-top, $line/2);
+	@include rem(margin-bottom, $line);
+	border-top:$keyline;
+
+
+	@media only screen and (min-width: $screenSmall) {
+		@include box;
+		border:none;
+	}
+}

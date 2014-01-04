@@ -1,0 +1,26 @@
+.drawer {
+	@extend .group;
+	@include transition(all 0.5s ease);
+	overflow: hidden;
+	padding:0;
+	max-height:0;
+
+	.container {
+		@include rem(padding, $line*2 0);
+
+		> *:first-child,
+		> *:first-child > *:first-child,
+		> *:first-child > *:first-child > *:first-child {
+			margin-top: 0;
+		}
+		> *:last-child,
+		> *:last-child > *:last-child,
+		> *:last-child > *:last-child > *:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	&.opened {
+		max-height:1000px;
+	}
+}

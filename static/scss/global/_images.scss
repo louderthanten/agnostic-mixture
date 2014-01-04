@@ -1,0 +1,53 @@
+// Resposive images
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+figure {
+	position:relative;
+
+    > img,
+    > iframe {
+			display: block;
+			margin:0;
+    }
+}
+
+figcaption {
+
+	.source {
+		float:right;
+	}
+}
+
+@media only screen and (max-width: $screenSmall) {
+	iframe {
+		max-height:$line*8.5;
+	}
+	figcaption {
+		.source {
+			display: block;
+			float:none;
+			text-align: left;
+		}
+	}
+}
+@media only screen and (min-width: $screenSmall) {
+	.img--right{
+		margin-bottom: rem($line/2);
+		margin-left: rem($line/2);
+		float: right;
+	}
+	.img--left{
+		margin-bottom: rem($line/2);
+		margin-right: rem($line/2);
+		float: left;
+	}
+	.img--center{
+		display: block;
+		margin-right: auto;
+		margin-left: auto;
+		margin-bottom: rem($line/2);
+	}
+}

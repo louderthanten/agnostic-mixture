@@ -1,0 +1,50 @@
+h1 {
+
+	> span,
+	> small {
+
+	}
+}
+h2 {
+
+	> span,
+	> small {
+
+	}
+
+}
+h3 {
+
+	> span,
+	> small {
+
+	}
+}
+h4 {
+
+}
+h5 {
+
+}
+h6 {
+
+}
+
+hgroup,
+.hgroup {
+
+	> *:first-child {
+		margin-bottom: 0;
+	}
+
+	> *:last-child,
+	h2 + h1,
+	h3 + h2 {
+		margin-top: 0;
+	}
+
+	> *:first-child {
+
+	}
+
+}

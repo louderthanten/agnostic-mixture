@@ -1,0 +1,33 @@
+.pagination {
+	@extend .group;
+	@include rem(margin-top, $line);
+
+	li {
+		display:block;
+		float:left;
+	}
+	a {
+		display:block;
+
+		&:link,
+		&:visited {
+
+		}
+
+		&:hover,
+		&:active {
+
+		}
+	}
+
+	.current a{
+		cursor: default;
+	}
+}
+
+.pagination--mini {
+	a {
+		display: block;
+		float:left;
+	}
+}
