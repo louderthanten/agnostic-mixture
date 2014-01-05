@@ -133,7 +133,7 @@ td{
 
 	th,
 	td{
-		//border:$rule;
+		border:$rule;
 
 		&:empty{
 			border:none;
@@ -147,11 +147,6 @@ td{
 
 .table--striped{
 	tbody tr:nth-of-type(odd){
-		//background-color: $white;
+		background-color: lighten($dark-grey, 70);
 	}
-}
-
-// Data tables
-.table--data{
-
 }

@@ -2465,10 +2465,20 @@ td {
   width: 95%;
 }
 
+/* line 135, ../../static/scss/global/_tables.scss */
+.table--bordered th,
+.table--bordered td {
+  border: 1px solid #333333;
+}
 /* line 138, ../../static/scss/global/_tables.scss */
 .table--bordered th:empty,
 .table--bordered td:empty {
   border: none;
+}
+
+/* line 149, ../../static/scss/global/_tables.scss */
+.table--striped tbody tr:nth-of-type(odd) {
+  background-color: #cccccc;
 }
 
 /* line 1, ../../static/scss/global/_layout.scss */
