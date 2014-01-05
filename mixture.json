@@ -1,5 +1,5 @@
 {
-  "debug": false,
+  "debug": true,
   "domain": null,
   "lintScripts": false,
   "modelSource": null,
@@ -7,7 +7,7 @@
   "preprocessorScriptOutput": "assets/js",
   "preprocessorStyleOutput": "assets/css",
   "projectDescription": "A Mixture for building Agnostic.io UI kits",
-  "projectName": "Agnostic Kit Builder",
+  "projectName": "Agnostic",
   "publishedId": null,
   "serverHostname": null,
   "serverPort": null,

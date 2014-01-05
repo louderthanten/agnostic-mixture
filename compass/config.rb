@@ -15,6 +15,6 @@ javascripts_dir = "assets/js" # update to the path of your script files.
 
 line_comments = true
 
-cache = true
+cache = false
 
 relative_assets = true

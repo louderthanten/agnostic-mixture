@@ -2,38 +2,23 @@
   "example": {
     "collection": {
       "/example/example": {
-        "title": "An example Markdown post",
         "mixture_date": "2013-06-11T00:00:00Z",
-        "month": "06",
-        "slug": "/example/example",
-        "body": "\n<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>\n\n<blockquote>\n  <p>&#8220;Lorem ipsum dolor sit amet&#8221;</p>\n</blockquote>\n\n<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius.</p>\n\n<ol>\n  <li>Lorem ipsum dolor sit amet.</li>\n  <li>Lorem ipsum dolor sit amet.</li>\n  <li>Lorem ipsum dolor sit amet.</li>\n</ol>\n\n<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy</p>\n\n<pre>&lt;!doctype html&gt;\n&lt;html&gt;\n  &lt;body&gt;\n    &lt;h1&gt;Page Headline&lt;/h1&gt;\n  &lt;/body&gt;\n&lt;/html&gt;\n</pre>\n\n<p><a href=\"http://docs.mixture.io\">http://docs.mixture.io</a></p>\n\n<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy</p>\n\n<ul>\n  <li>Lorem ipsum dolor sit amet.</li>\n  <li>Lorem ipsum dolor sit amet.</li>\n  <li>Lorem ipsum dolor sit amet.</li>\n</ul>\n",
         "date": "Tue Jun 11 00:00:00 UTC 2013",
-        "mixture_month_year": "06/2013",
+        "body": "\n<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>\n\n<blockquote>\n  <p>&#8220;Lorem ipsum dolor sit amet&#8221;</p>\n</blockquote>\n\n<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius.</p>\n\n<ol>\n  <li>Lorem ipsum dolor sit amet.</li>\n  <li>Lorem ipsum dolor sit amet.</li>\n  <li>Lorem ipsum dolor sit amet.</li>\n</ol>\n\n<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy</p>\n\n<pre>&lt;!doctype html&gt;\n&lt;html&gt;\n  &lt;body&gt;\n    &lt;h1&gt;Page Headline&lt;/h1&gt;\n  &lt;/body&gt;\n&lt;/html&gt;\n</pre>\n\n<p><a href=\"http://docs.mixture.io\">http://docs.mixture.io</a></p>\n\n<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy</p>\n\n<ul>\n  <li>Lorem ipsum dolor sit amet.</li>\n  <li>Lorem ipsum dolor sit amet.</li>\n  <li>Lorem ipsum dolor sit amet.</li>\n</ul>\n",
         "tags": [
           "Example",
           "Markdown"
         ],
-        "published": true,
+        "month": "06",
+        "slug": "/example/example",
+        "mixture_month_year": "06/2013",
         "ticks": 1370908800.0,
+        "published": true,
+        "title": "An example Markdown post",
         "year": "2013"
       }
     },
     "index": {
-      "title": {
-        "an example markdown post": [
-          "/example/example"
-        ]
-      },
-      "slug": {
-        "/example/example": [
-          "/example/example"
-        ]
-      },
-      "month": {
-        "06": [
-          "/example/example"
-        ]
-      },
       "mixture_date": {
         "2013-06-11t00:00:00z": [
           "/example/example"
@@ -47,18 +32,33 @@
           "/example/example"
         ]
       },
+      "slug": {
+        "/example/example": [
+          "/example/example"
+        ]
+      },
+      "month": {
+        "06": [
+          "/example/example"
+        ]
+      },
       "mixture_month_year": {
         "06/2013": [
           "/example/example"
         ]
       },
-      "year": {
-        "2013": [
+      "ticks": {
+        "1370908800.0": [
           "/example/example"
         ]
       },
-      "ticks": {
-        "1370908800.0": [
+      "title": {
+        "an example markdown post": [
+          "/example/example"
+        ]
+      },
+      "year": {
+        "2013": [
           "/example/example"
         ]
       }

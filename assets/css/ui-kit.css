@@ -1,0 +1,311 @@
+/* line 12, ../../static/scss/ui-kit.scss */
+.primary * {
+  font-family: serif;
+}
+
+/* line 16, ../../static/scss/ui-kit.scss */
+.secondary * {
+  font-family: sans-serif;
+}
+
+/* line 21, ../../static/scss/ui-kit.scss */
+.color1 {
+  background: #333333;
+}
+
+/* line 22, ../../static/scss/ui-kit.scss */
+.color2 {
+  background: red;
+}
+
+/* line 28, ../../static/scss/ui-kit.scss */
+section {
+  padding: 72px 0;
+  padding:  4.5rem 0;
+}
+
+/* line 31, ../../static/scss/ui-kit.scss */
+.header {
+  padding: 24px 0 0 0;
+  padding:  1.5rem 0 0 0;
+}
+
+/* line 34, ../../static/scss/ui-kit.scss */
+.logo {
+  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
+  max-width: 200px;
+}
+
+/* line 38, ../../static/scss/ui-kit.scss */
+.tagline {
+  margin-top: 24px;
+  margin-top: 1.5rem;
+}
+
+/* line 41, ../../static/scss/ui-kit.scss */
+nav {
+  clear: both;
+}
+/* line 43, ../../static/scss/ui-kit.scss */
+nav ul {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  *zoom: 1;
+}
+/* line 46, ../../static/scss/ui-kit.scss */
+nav ul > li {
+  list-style-image: none;
+  list-style-type: none;
+  margin-left: 0;
+  white-space: nowrap;
+  display: inline;
+  float: left;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+/* line 48, ../../../../../../../../Applications/Mixture.app/Contents/Resources/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
+nav ul > li:first-child, nav ul > li.first {
+  padding-left: 0;
+}
+/* line 49, ../../../../../../../../Applications/Mixture.app/Contents/Resources/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
+nav ul > li:last-child {
+  padding-right: 0;
+}
+/* line 50, ../../../../../../../../Applications/Mixture.app/Contents/Resources/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
+nav ul > li.last {
+  padding-right: 0;
+}
+/* line 49, ../../static/scss/ui-kit.scss */
+nav ul > li a {
+  display: block;
+  padding-right: 12px;
+}
+
+/* line 58, ../../static/scss/ui-kit.scss */
+.type-sample p {
+  font-size: 24px;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  margin-bottom: 36px;
+  letter-spacing: 0.1em;
+}
+
+/* line 66, ../../static/scss/ui-kit.scss */
+.grids .container hr {
+  clear: both;
+}
+/* line 69, ../../static/scss/ui-kit.scss */
+.grids .container div {
+  margin-bottom: 24px;
+  height: 240px;
+  float: left;
+  padding-left: 12px;
+  padding-left: 0.75rem;
+  padding-right: 12px;
+  padding-right: 0.75rem;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* line 75, ../../static/scss/ui-kit.scss */
+.grids .container div span {
+  display: block;
+  width: 100%;
+  height: 240px;
+}
+
+/* line 83, ../../static/scss/ui-kit.scss */
+.content {
+  max-width: 40em;
+}
+
+/* line 88, ../../static/scss/ui-kit.scss */
+.iconset ul {
+  list-style: none;
+}
+
+/* line 93, ../../static/scss/ui-kit.scss */
+.scale {
+  max-width: 30em;
+}
+/* line 96, ../../static/scss/ui-kit.scss */
+.scale td {
+  padding: 0;
+}
+
+/* line 101, ../../static/scss/ui-kit.scss */
+.key {
+  font-weight: 700;
+}
+
+/* line 106, ../../static/scss/ui-kit.scss */
+.colors {
+  background: #fff;
+}
+
+/* line 109, ../../static/scss/ui-kit.scss */
+.swatch {
+  margin: 12px 12px 72px 12px;
+  margin:  0.75rem 0.75rem 4.5rem 0.75rem;
+  padding-left: 12px;
+  padding-left: 0.75rem;
+  padding-right: 12px;
+  padding-right: 0.75rem;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  width: 120px;
+  height: 120px;
+}
+/* line 118, ../../static/scss/ui-kit.scss */
+.swatch p {
+  position: absolute;
+  bottom: -4.25em;
+  left: 0;
+  width: 100%;
+}
+
+/* line 130, ../../static/scss/ui-kit.scss */
+.grids span {
+  background: #333333;
+}
+/* line 133, ../../static/scss/ui-kit.scss */
+.grids h2 {
+  clear: both;
+}
+
+/* line 137, ../../static/scss/ui-kit.scss */
+.three {
+  width: 33.33333%;
+}
+
+/* line 140, ../../static/scss/ui-kit.scss */
+.five {
+  width: 20%;
+}
+
+/* line 143, ../../static/scss/ui-kit.scss */
+.six {
+  width: 16.66667%;
+}
+
+/* line 151, ../../static/scss/ui-kit.scss */
+.folding.four, .folding.five, .folding.six, .folding.seven, .folding.eight {
+  display: none;
+}
+/* line 154, ../../static/scss/ui-kit.scss */
+.folding.two {
+  display: block !important;
+  width: 50%;
+}
+/* line 158, ../../static/scss/ui-kit.scss */
+.folding.three {
+  display: block !important;
+  width: 33.33333%;
+}
+
+/* line 164, ../../static/scss/ui-kit.scss */
+.combined-grid {
+  position: relative;
+  width: 100%;
+  padding: 0;
+}
+/* line 169, ../../static/scss/ui-kit.scss */
+.combined-grid .grid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 200px;
+  opacity: 0.3;
+  padding: 0 !important;
+}
+
+@media only screen and (min-width: 48em) {
+  /* line 181, ../../static/scss/ui-kit.scss */
+  .iconset {
+    padding-left: 12px;
+    padding-left: 0.75rem;
+    padding-right: 12px;
+    padding-right: 0.75rem;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 50%;
+    float: left;
+  }
+
+  /* line 187, ../../static/scss/ui-kit.scss */
+  .folding.four {
+    display: block;
+    width: 25%;
+  }
+  /* line 191, ../../static/scss/ui-kit.scss */
+  .folding.five {
+    display: block;
+    width: 20%;
+  }
+
+  /* line 198, ../../static/scss/ui-kit.scss */
+  .callouts .callout {
+    padding-left: 12px;
+    padding-left: 0.75rem;
+    padding-right: 12px;
+    padding-right: 0.75rem;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+    float: left;
+    width: 50%;
+  }
+  /* line 203, ../../static/scss/ui-kit.scss */
+  .callouts .callout:nth-child(odd) {
+    clear: both;
+  }
+}
+@media only screen and (min-width: 98em) {
+  /* line 210, ../../static/scss/ui-kit.scss */
+  .iconset {
+    width: 33.33333%;
+  }
+}
+@media only screen and (min-width: 110em) {
+  /* line 217, ../../static/scss/ui-kit.scss */
+  .folding.six {
+    display: block;
+    width: 16.66667%;
+  }
+  /* line 221, ../../static/scss/ui-kit.scss */
+  .folding.seven {
+    display: block;
+    width: 14.28571%;
+  }
+  /* line 225, ../../static/scss/ui-kit.scss */
+  .folding.eight {
+    display: block;
+    width: 12.5%;
+  }
+
+  /* line 231, ../../static/scss/ui-kit.scss */
+  .callouts .callout {
+    width: 25%;
+  }
+  /* line 234, ../../static/scss/ui-kit.scss */
+  .callouts .callout:nth-child(odd) {
+    clear: none;
+  }
+  /* line 237, ../../static/scss/ui-kit.scss */
+  .callouts .callout:nth-child(4n+5) {
+    clear: both;
+  }
+}

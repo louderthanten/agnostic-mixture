@@ -14,10 +14,10 @@
 
 		<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-		{{ "main.css" | asset_url | stylesheet_tag }}
+		{{ "app.css" | asset_url | stylesheet_tag }}
 
-		<!-- Styleguide=exclusive styles. Do not use elsewhere -->
-		{{ "pages/style-guide.css" | asset_url | stylesheet_tag }}
+		<!-- UI kit exclusive styles. Do not use elsewhere -->
+		{{ "ui-kit.css" | asset_url | stylesheet_tag }}
 
 		<!-- Style block allowing child pages to inject their own styles -->
 		{% block styles %}{% endblock %}

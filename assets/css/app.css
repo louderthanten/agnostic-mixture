@@ -2965,9 +2965,10 @@ code {
   overflow: auto;
   /* [3] */
   margin-left: 0;
+  margin-bottom: 0;
 }
 
-/* line 75, ../../static/scss/modules/_code.scss */
+/* line 76, ../../static/scss/modules/_code.scss */
 .line-numbers code {
   white-space: pre;
   /* [4] */
