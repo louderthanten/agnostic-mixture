@@ -1,12 +1,16 @@
 // Button checkboxes
 
-.check-buttons {
+.check-buttons,
+.radio-buttons {
 	label {
-		@extend button;
 		@include transition(all 0.1s linear);
 		position:relative;
 		display: block;
 		float:left;
+		padding:rem($line/4);
+		margin-right: 1px;
+		background:$dark-grey;
+		color:$white;
 		text-align: center;
 	}
 	input {
@@ -28,6 +32,6 @@
 		margin-right:auto;
 	}
 	.checked {
-		//@extend a.button:active;
+		background:$red;
 	}
 }

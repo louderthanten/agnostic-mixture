@@ -1,11 +1,17 @@
 button,
 input[type="submit"],
+.button,
 a.button {
 	position:relative;
 	text-align:center;
 	cursor:pointer;
   display:inline-block;
 	outline:none;
+	border:none;
+	text-decoration: none;
+	padding:rem($line/4 $line/2);
+	background:$dark-grey;
+	color:$white;
 
 	&:link,
 	&:visited {
@@ -13,12 +19,14 @@ a.button {
 	}
 
 	&:hover {
-
+		background:$red;
+		color:$white;
 	}
 
 	&:active,
 	&:focus {
-
+		background:$red;
+		color:$white;
 	}
 }
 

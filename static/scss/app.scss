@@ -16,6 +16,7 @@
 @import "global/animation";
 @import "global/headings";
 @import "global/paragraphs";
+@import "global/code";
 @import "global/time-stamps";
 @import "global/vcards";
 @import "global/smallprint";
@@ -24,12 +25,10 @@
 @import "global/lists";
 @import "global/keylines";
 @import "global/images";
+@import "global/videos";
 @import "global/icons";
 @import "global/buttons";
 @import "global/forms";
-@import "global/switches";
-@import "global/sliders";
-@import "global/check-buttons";
 @import "global/tables";
 @import "global/layout";
 
@@ -39,8 +38,8 @@
 @import "modules/callouts";
 @import "modules/drawers";
 @import "modules/breadcrumbs";
-@import "modules/pagination";;
-@import "modules/modals";
-@import "modules/code";
+@import "modules/pagination";
+@import "modules/switches";
+@import "modules/check-buttons";
 @import "modules/gallery";
 @import "modules/footer";

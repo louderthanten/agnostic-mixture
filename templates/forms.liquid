@@ -3,7 +3,9 @@
 	<div class="container">
 
 		<h1>Forms</h1>
+
 		<hr />
+
 		<form action="" method="post">
 			<fieldset>
 				<legend><h2>Text Inputs</h2></legend>
@@ -56,31 +58,9 @@
 					<label for="range">Range input</label>
 					<input type="range" name="range" value="" placeholder="" />
 				</div>
-				<div class="field price-slider">
-					<label for="range">Range input (Jquery UI)</label>
-					<p><input type="text" id="amount" class="price-slider__input" /></p>
-					<div id="slider-range"></div>
-				</div>
 				<div class="field">
 					<label for="color">Color input</label>
 					<input type="color" name="color" value="" placeholder="" />
-				</div>
-				<div class="field check-buttons">
-					<legend>Check Buttons</legend>
-					<label for=""><input type="checkbox" name="application" value="" /><span class="ss-globe"></span> Fixed</label>
-					<label for=""><input type="checkbox" name="application" value="" /><span class="ss-boat"></span> Marine</label>
-					<label for=""><input type="checkbox" name="application" value="" /><span class="ss-cell"></span> Portable</label>
-					<label for=""><input type="checkbox" name="application" value="" /><span class="ss-car"></span> Vehicular</label>
-				</div>
-				<div class="field">
-					<label for="">Switch</label>
-					<div class="switch">
-						<input id="x" name="switch-x" type="radio" checked>
-				  		<label for="x" onclick="">Off</label>
-				  		<input id="x1" name="switch-x" type="radio">
-				  		<label for="x1" onclick="">On</label>
-				  		<span></span>
-					</div>
 				</div>
 
 				<div class="field">
@@ -151,6 +131,90 @@
 					<label for="file">File upload</label>
 					<input type="file" name="file" value="" />
 				</div>
+			</fieldset>
+			<fieldset>
+				<legend><h2>Special fields</h2></legend>
+
+				<hr />
+
+				<div class="field check-buttons js-pill">
+					<legend><h3>Checkbox pill buttons</h3></legend>
+					<label for="cb1"><input type="checkbox" name="check-button" value="1" id="cb1" />Item 1</label>
+					<label for="cb2"><input type="checkbox" name="check-button" value="2" id="cb2" />Item 2</label>
+					<label for="cb3"><input type="checkbox" name="check-button" value="3" id="cb3" />Item 3</label>
+				</div>
+
+				<h4>Markup example:</h4>
+				<div class="code-block">
+					<ol class="line-numbers">
+						<li><code>&lt;div class="field check-buttons js-pill"&gt;</code></li>
+						<li><code>	&lt;label for="cb1"&gt;&lt;input type="checkbox" name="check-button" value="1" id="cb1" /&gt;Item 1&lt;/label&gt;</code></li>
+						<li><code>	&lt;label for="cb2"&gt;&lt;input type="checkbox" name="check-button" value="2" id="cb2" /&gt;Item 2&lt;/label&gt;</code></li>
+						<li><code>	&lt;label for="cb3"&gt;&lt;input type="checkbox" name="check-button" value="3" id="cb3" /&gt;Item 3&lt;/label&gt;</code></li>
+						<li><code>&lt;/div&gt;</code></li>
+					</ol>
+			  </div>
+
+				<hr />
+
+				<div class="field radio-buttons js-pill">
+					<legend><h3>Radio pill buttons</h3></legend>
+					<label for="rb1"><input type="radio" name="radio-button" value="1" id="rb1" />Item 1</label>
+					<label for="rb2"><input type="radio" name="radio-button" value="2" id="rb2" />Item 2</label>
+					<label for="rb3"><input type="radio" name="radio-button" value="3" id="rb3" />Item 3</label>
+				</div>
+
+				<h4>Markup example:</h4>
+				<div class="code-block">
+					<ol class="line-numbers">
+						<li><code>&lt;div class="field radio-buttons js-pill"&gt;</code></li>
+						<li><code>	&lt;label for="rb1"&gt;&lt;input type="radio" name="radio-button" value="1" id="rb1" /&gt;Item 1&lt;/label&gt;</code></li>
+						<li><code>	&lt;label for="rb2"&gt;&lt;input type="radio" name="radio-button" value="2" id="rb2" /&gt;Item 2&lt;/label&gt;</code></li>
+						<li><code>	&lt;label for="rb3"&gt;&lt;input type="radio" name="radio-button" value="3" id="rb3" /&gt;Item 3&lt;/label&gt;</code></li>
+						<li><code>&lt;/div&gt;</code></li>
+					</ol>
+			  </div>
+
+				<hr />
+
+
+				<label for=""><h3>Switch</h3></label>
+				<div class="field switch">
+					<input id="x" name="switch-x" type="radio" checked>
+			  		<label for="x" onclick="">Off</label>
+			  		<input id="y" name="switch-x" type="radio">
+			  		<label for="y" onclick="">On</label>
+			  		<span></span>
+				</div>
+				<h4>Markup example:</h4>
+				<div class="code-block">
+					<ol class="line-numbers">
+						<li><code>&lt;div class="field switch"&gt;</code></li>
+						<li><code>	&lt;input id="x" name="switch-x" type="radio" checked &gt;</code></li>
+						<li><code>	&lt;label for="x"&gt;Off&lt;/label&gt;</code></li>
+						<li><code>	&lt;input id="y" name="switch-x" type="radio" &gt;</code></li>
+						<li><code>	&lt;label for="y"&gt;On&lt;/label&gt;</code></li>
+						<li><code>&lt;/div&gt;</code></li>
+					</ol>
+			  </div>
+
+			  <!--<hr />
+
+				<div class="field range-slider">
+					<label for="range">Range input <small>(Requires jQuery UI)</small></label>
+					<p><input type="text" id="range" class="range-slider__input" /></p>
+					<div id="slider-range"></div>
+				</div>
+
+				<div class="code-block">
+					<ol class="line-numbers">
+						<li><code>&lt;div class="field range-slider"&gt;</code></li>
+						<li><code>	&lt;p&gt;&lt;input type="text" id="range" class="range-slider__input" /&gt;&lt;/p&gt;</code></li>
+						<li><code>	&lt;div id="slider-range"&gt;&lt;/div&gt;</code></li>
+						<li><code>&lt;/div&gt;</code></li>
+					</ol>
+			  </div>-->
+
 			</fieldset>
 			<fieldset>
 				<legend><h2>Buttons</h2></legend>

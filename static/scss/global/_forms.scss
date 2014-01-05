@@ -13,6 +13,7 @@ fieldset {
 .field {
 	@extend .group;
 	position: relative;
+	padding-bottom: rem($line);
 }
 
 .field--check {
@@ -37,10 +38,10 @@ label,
 .label--error {
 	position:absolute;
 	left:0;
-	bottom:rem($line*1.25);
+	bottom:0;
 }
 .error {
-
+	color:$red;
 }
 
 //   Spoken forms are for forms that read like spoken word, e.g.:
@@ -117,13 +118,11 @@ input[type=search] {
 }
 
 select {
-	@extend .text-input;
-	width:100%;
+
 }
 
 input[type=file] {
 	@extend .text-input;
-	@extend .button;
 }
 
 //   Groups of checkboxes and radios, e.g.:

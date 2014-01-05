@@ -282,7 +282,7 @@ legend {
  * 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome.
  */
 /* line 288, ../../static/scss/settings/_normalize.scss */
-button, .check-buttons label,
+button,
 input,
 select,
 textarea {
@@ -299,7 +299,7 @@ textarea {
  * the UA stylesheet.
  */
 /* line 300, ../../static/scss/settings/_normalize.scss */
-button, .check-buttons label,
+button,
 input {
   line-height: normal;
 }
@@ -311,7 +311,7 @@ input {
  * Correct `select` style inheritance in Firefox 4+ and Opera.
  */
 /* line 312, ../../static/scss/settings/_normalize.scss */
-button, .check-buttons label,
+button,
 select {
   text-transform: none;
 }
@@ -324,7 +324,7 @@ select {
  *    `input` and others.
  */
 /* line 327, ../../static/scss/settings/_normalize.scss */
-button, .check-buttons label,
+button,
 html input[type="button"],
 input[type="reset"],
 input[type="submit"] {
@@ -338,7 +338,7 @@ input[type="submit"] {
  * Re-set default cursor for disabled elements.
  */
 /* line 337, ../../static/scss/settings/_normalize.scss */
-button[disabled], .check-buttons label[disabled],
+button[disabled],
 html input[disabled] {
   cursor: default;
 }
@@ -385,7 +385,7 @@ input[type="search"]::-webkit-search-decoration {
  * Remove inner padding and border in Firefox 4+.
  */
 /* line 380, ../../static/scss/settings/_normalize.scss */
-button::-moz-focus-inner, .check-buttons label::-moz-focus-inner,
+button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
   padding: 0;
@@ -485,24 +485,24 @@ table {
 
 /* Contain floats: nicolasgallagher.com/micro-clearfix-hack/ */
 /* line 66, ../../static/scss/settings/_helpers.scss */
-.group, .link-list, .feature-list, .button-group, fieldset, .field, .field--check label, legend, .switch, header,
+.group, .link-list, .feature-list, .button-group, fieldset, .field, .field--check label, legend, header,
 footer,
-section, .container, .container > *, .callout, .code-block, .callout .content, .code-block .content, .drawer, .pagination {
+section, .container, .container > *, .callout, .code-block, .callout .content, .code-block .content, .drawer, .pagination, .switch {
   zoom: 1;
 }
 /* line 70, ../../static/scss/settings/_helpers.scss */
-.group:before, .link-list:before, .feature-list:before, .button-group:before, fieldset:before, .field:before, .field--check label:before, legend:before, .switch:before, header:before,
+.group:before, .link-list:before, .feature-list:before, .button-group:before, fieldset:before, .field:before, .field--check label:before, legend:before, header:before,
 footer:before,
-section:before, .container:before, .container > :before, .callout:before, .code-block:before, .callout .content:before, .code-block .content:before, .drawer:before, .pagination:before, .group:after, .link-list:after, .feature-list:after, .button-group:after, fieldset:after, .field:after, .field--check label:after, legend:after, .switch:after, header:after,
+section:before, .container:before, .container > :before, .callout:before, .code-block:before, .callout .content:before, .code-block .content:before, .drawer:before, .pagination:before, .switch:before, .group:after, .link-list:after, .feature-list:after, .button-group:after, fieldset:after, .field:after, .field--check label:after, legend:after, header:after,
 footer:after,
-section:after, .container:after, .container > :after, .callout:after, .code-block:after, .callout .content:after, .code-block .content:after, .drawer:after, .pagination:after {
+section:after, .container:after, .container > :after, .callout:after, .code-block:after, .callout .content:after, .code-block .content:after, .drawer:after, .pagination:after, .switch:after {
   content: " ";
   display: table;
 }
 /* line 75, ../../static/scss/settings/_helpers.scss */
-.group:after, .link-list:after, .feature-list:after, .button-group:after, fieldset:after, .field:after, .field--check label:after, legend:after, .switch:after, header:after,
+.group:after, .link-list:after, .feature-list:after, .button-group:after, fieldset:after, .field:after, .field--check label:after, legend:after, header:after,
 footer:after,
-section:after, .container:after, .container > :after, .callout:after, .code-block:after, .callout .content:after, .code-block .content:after, .drawer:after, .pagination:after {
+section:after, .container:after, .container > :after, .callout:after, .code-block:after, .callout .content:after, .code-block .content:after, .drawer:after, .pagination:after, .switch:after {
   clear: both;
 }
 
@@ -819,7 +819,7 @@ embed,
 
 /* button elements seem to need a little more width */
 /* line 220, ../../static/scss/vendor/_jquery-ui.scss */
-button.ui-button-icon-only, .check-buttons label.ui-button-icon-only {
+button.ui-button-icon-only {
   width: 2.4em;
 }
 
@@ -829,7 +829,7 @@ button.ui-button-icon-only, .check-buttons label.ui-button-icon-only {
 }
 
 /* line 226, ../../static/scss/vendor/_jquery-ui.scss */
-button.ui-button-icons-only, .check-buttons label.ui-button-icons-only {
+button.ui-button-icons-only {
   width: 3.7em;
 }
 
@@ -924,8 +924,7 @@ input.ui-button {
 /* reset extra padding in Firefox, see h5bp.com/l */
 /* line 297, ../../static/scss/vendor/_jquery-ui.scss */
 input.ui-button::-moz-focus-inner,
-button.ui-button::-moz-focus-inner,
-.check-buttons label.ui-button::-moz-focus-inner {
+button.ui-button::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
@@ -1055,7 +1054,7 @@ button.ui-button::-moz-focus-inner,
 }
 
 /* line 389, ../../static/scss/vendor/_jquery-ui.scss */
-.ui-datepicker .ui-datepicker-buttonpane button, .ui-datepicker .ui-datepicker-buttonpane .check-buttons label, .check-buttons .ui-datepicker .ui-datepicker-buttonpane label {
+.ui-datepicker .ui-datepicker-buttonpane button {
   float: right;
   margin: .5em .2em .4em;
   cursor: pointer;
@@ -1065,7 +1064,7 @@ button.ui-button::-moz-focus-inner,
 }
 
 /* line 397, ../../static/scss/vendor/_jquery-ui.scss */
-.ui-datepicker .ui-datepicker-buttonpane button.ui-datepicker-current, .ui-datepicker .ui-datepicker-buttonpane .check-buttons label.ui-datepicker-current, .check-buttons .ui-datepicker .ui-datepicker-buttonpane label.ui-datepicker-current {
+.ui-datepicker .ui-datepicker-buttonpane button.ui-datepicker-current {
   float: left;
 }
 
@@ -1155,12 +1154,12 @@ button.ui-button::-moz-focus-inner,
 }
 
 /* line 457, ../../static/scss/vendor/_jquery-ui.scss */
-.ui-datepicker-rtl .ui-datepicker-buttonpane button, .ui-datepicker-rtl .ui-datepicker-buttonpane .check-buttons label, .check-buttons .ui-datepicker-rtl .ui-datepicker-buttonpane label {
+.ui-datepicker-rtl .ui-datepicker-buttonpane button {
   float: left;
 }
 
 /* line 461, ../../static/scss/vendor/_jquery-ui.scss */
-.ui-datepicker-rtl .ui-datepicker-buttonpane button.ui-datepicker-current, .ui-datepicker-rtl .ui-datepicker-buttonpane .check-buttons label.ui-datepicker-current, .check-buttons .ui-datepicker-rtl .ui-datepicker-buttonpane label.ui-datepicker-current,
+.ui-datepicker-rtl .ui-datepicker-buttonpane button.ui-datepicker-current,
 .ui-datepicker-rtl .ui-datepicker-group {
   float: right;
 }
@@ -1232,7 +1231,7 @@ button.ui-button::-moz-focus-inner,
 }
 
 /* line 514, ../../static/scss/vendor/_jquery-ui.scss */
-.ui-dialog .ui-dialog-buttonpane button, .ui-dialog .ui-dialog-buttonpane .check-buttons label, .check-buttons .ui-dialog .ui-dialog-buttonpane label {
+.ui-dialog .ui-dialog-buttonpane button {
   margin: .5em .4em .5em 0;
   cursor: pointer;
 }
@@ -1602,7 +1601,6 @@ body .ui-tooltip {
 /* line 3, ../../static/scss/global/_animation.scss */
 a,
 button,
-.check-buttons label,
 input[type="submit"] {
   -webkit-transition: all, 0.2s;
   -moz-transition: all, 0.2s;
@@ -1701,6 +1699,99 @@ sup {
   background: blue;
   color: white;
   text-shadow: none;
+}
+
+/*------------------------------------*\
+		$CODE
+\*------------------------------------*/
+/**
+ * Use an explicit font stack to ensure browsers render correct `line-height`.
+ */
+/* line 7, ../../static/scss/global/_code.scss */
+pre {
+  overflow: auto;
+}
+
+/* line 10, ../../static/scss/global/_code.scss */
+pre mark {
+  background: none;
+  border-bottom: 1px solid;
+  color: inherit;
+}
+
+/**
+ * Add comments to your code examples, e.g.:
+ *
+	 <code>&lt;/div&gt;<span class=code-comment>&lt;!-- /wrapper --&gt;</span></code>
+ *
+ */
+/* line 23, ../../static/scss/global/_code.scss */
+.code-comment {
+  /**
+   * Override this setting in your theme stylesheet
+   */
+  opacity: 0.75;
+  filter: alpha(opacity=75);
+}
+
+/* line 33, ../../static/scss/global/_code.scss */
+.code-block {
+  padding: 24px;
+  padding: 1.5rem;
+  color: white;
+}
+
+/* line 40, ../../static/scss/global/_code.scss */
+code {
+  font-family: monospace;
+  color: white;
+}
+
+/* line 44, ../../static/scss/global/_code.scss */
+.code__comment {
+  color: #878787;
+}
+
+/**
+ * You can add line numbers to your code examples but be warned, it requires
+ * some pretty funky looking markup, e.g.:
+ *
+	 <ol class=line-numbers>
+			 <li><code>.nav{</code></li>
+			 <li><code>    list-style:none;</code></li>
+			 <li><code>    margin-left:0;</code></li>
+			 <li><code>}</code></li>
+			 <li><code>    .nav > li,</code></li>
+			 <li><code>        .nav > li > a{</code></li>
+			 <li><code>            display:inline-block;</code></li>
+			 <li><code>           *display:inline-block;</code></li>
+			 <li><code>            zoom:1;</code></li>
+			 <li><code>        }</code></li>
+	 </ol>
+ *
+ * 1. Make the list look like code.
+ * 2. Give the list flush numbers with a leading zero.
+ * 3. Make sure lines of code don’t wrap.
+ * 4. Give the code form by forcing the `code` to honour white-space.
+ */
+/* line 71, ../../static/scss/global/_code.scss */
+.line-numbers {
+  font-family: monospace;
+  /* [1] */
+  list-style: decimal-leading-zero inside;
+  /* [2] */
+  white-space: nowrap;
+  /* [3] */
+  overflow: auto;
+  /* [3] */
+  margin-left: 0;
+  margin-bottom: 0;
+}
+
+/* line 79, ../../static/scss/global/_code.scss */
+.line-numbers code {
+  white-space: pre;
+  /* [4] */
 }
 
 /* line 6, ../../static/scss/global/_time-stamps.scss */
@@ -1922,25 +2013,50 @@ figcaption .source {
     margin-bottom: 0.75rem;
   }
 }
-/* line 3, ../../static/scss/global/_buttons.scss */
-button, .check-buttons label,
+/* line 4, ../../static/scss/global/_buttons.scss */
+button,
 input[type="submit"],
+.button,
 a.button {
   position: relative;
   text-align: center;
   cursor: pointer;
   display: inline-block;
   outline: none;
+  border: none;
+  text-decoration: none;
+  padding: 0.375rem 0.75rem;
+  background: #333333;
+  color: white;
+}
+/* line 21, ../../static/scss/global/_buttons.scss */
+button:hover,
+input[type="submit"]:hover,
+.button:hover,
+a.button:hover {
+  background: red;
+  color: white;
+}
+/* line 27, ../../static/scss/global/_buttons.scss */
+button:active, button:focus,
+input[type="submit"]:active,
+input[type="submit"]:focus,
+.button:active,
+.button:focus,
+a.button:active,
+a.button:focus {
+  background: red;
+  color: white;
 }
 
-/* line 45, ../../static/scss/global/_buttons.scss */
+/* line 53, ../../static/scss/global/_buttons.scss */
 a.button--icon span,
 .button--icon span {
   display: inline-block;
   vertical-align: middle;
 }
 
-/* line 60, ../../static/scss/global/_buttons.scss */
+/* line 68, ../../static/scss/global/_buttons.scss */
 a.button--disabled,
 a.button--disabled:hover,
 a.button--disabled:active,
@@ -1953,12 +2069,10 @@ a.button--disabled:focus,
 }
 
 @media only screen and (max-width: 48em) {
-  /* line 80, ../../static/scss/global/_buttons.scss */
-  .button-group .button, .button-group input[type=file],
+  /* line 88, ../../static/scss/global/_buttons.scss */
+  .button-group .button,
   .button-group a.button,
-  .button-group button,
-  .button-group .check-buttons label,
-  .check-buttons .button-group label {
+  .button-group button {
     padding: 16px;
     padding: 1rem;
     -webkit-border-radius: 0;
@@ -1968,12 +2082,10 @@ a.button--disabled:focus,
     border-radius: 0;
     display: block;
   }
-  /* line 88, ../../static/scss/global/_buttons.scss */
-  .button-group .button:first-child, .button-group input[type=file]:first-child,
+  /* line 96, ../../static/scss/global/_buttons.scss */
+  .button-group .button:first-child,
   .button-group a.button:first-child,
-  .button-group button:first-child,
-  .button-group .check-buttons label:first-child,
-  .check-buttons .button-group label:first-child {
+  .button-group button:first-child {
     -moz-border-radius-topright: 3px;
     -webkit-border-top-right-radius: 3px;
     border-top-right-radius: 3px;
@@ -1981,12 +2093,10 @@ a.button--disabled:focus,
     -webkit-border-top-left-radius: 3px;
     border-top-left-radius: 3px;
   }
-  /* line 95, ../../static/scss/global/_buttons.scss */
-  .button-group .button:last-child, .button-group input[type=file]:last-child,
+  /* line 103, ../../static/scss/global/_buttons.scss */
+  .button-group .button:last-child,
   .button-group a.button:last-child,
-  .button-group button:last-child,
-  .button-group .check-buttons label:last-child,
-  .check-buttons .button-group label:last-child {
+  .button-group button:last-child {
     -moz-border-radius-bottomright: 3px;
     -webkit-border-bottom-right-radius: 3px;
     border-bottom-right-radius: 3px;
@@ -1997,12 +2107,10 @@ a.button--disabled:focus,
 }
 
 @media only screen and (min-width: 48em) {
-  /* line 107, ../../static/scss/global/_buttons.scss */
-  .button-group .button, .button-group input[type=file],
+  /* line 115, ../../static/scss/global/_buttons.scss */
+  .button-group .button,
   .button-group a.button,
-  .button-group button,
-  .button-group .check-buttons label,
-  .check-buttons .button-group label {
+  .button-group button {
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
     -ms-border-radius: 0;
@@ -2011,12 +2119,10 @@ a.button--disabled:focus,
     margin: 0;
     float: left;
   }
-  /* line 120, ../../static/scss/global/_buttons.scss */
-  .button-group .button:first-child, .button-group input[type=file]:first-child,
+  /* line 128, ../../static/scss/global/_buttons.scss */
+  .button-group .button:first-child,
   .button-group a.button:first-child,
-  .button-group button:first-child,
-  .button-group .check-buttons label:first-child,
-  .check-buttons .button-group label:first-child {
+  .button-group button:first-child {
     -moz-border-radius-bottomleft: 3px;
     -webkit-border-bottom-left-radius: 3px;
     border-bottom-left-radius: 3px;
@@ -2024,12 +2130,10 @@ a.button--disabled:focus,
     -webkit-border-top-left-radius: 3px;
     border-top-left-radius: 3px;
   }
-  /* line 127, ../../static/scss/global/_buttons.scss */
-  .button-group .button:last-child, .button-group input[type=file]:last-child,
+  /* line 135, ../../static/scss/global/_buttons.scss */
+  .button-group .button:last-child,
   .button-group a.button:last-child,
-  .button-group button:last-child,
-  .button-group .check-buttons label:last-child,
-  .check-buttons .button-group label:last-child {
+  .button-group button:last-child {
     -moz-border-radius-bottomright: 3px;
     -webkit-border-bottom-right-radius: 3px;
     border-bottom-right-radius: 3px;
@@ -2050,24 +2154,30 @@ fieldset {
 /* line 13, ../../static/scss/global/_forms.scss */
 .field {
   position: relative;
+  padding-bottom: 1.5rem;
 }
 
-/* line 37, ../../static/scss/global/_forms.scss */
+/* line 38, ../../static/scss/global/_forms.scss */
 .label--error {
   position: absolute;
   left: 0;
-  bottom: 1.875rem;
+  bottom: 0;
 }
 
-/* line 59, ../../static/scss/global/_forms.scss */
+/* line 43, ../../static/scss/global/_forms.scss */
+.error {
+  color: red;
+}
+
+/* line 60, ../../static/scss/global/_forms.scss */
 .spoken-form label {
   display: inline-block;
   font: inherit;
 }
 
-/* line 72, ../../static/scss/global/_forms.scss */
+/* line 73, ../../static/scss/global/_forms.scss */
 .text-input, textarea, .search-input,
-input[type=search], select, input[type=file] {
+input[type=search], input[type=file] {
   -webkit-appearance: none;
   -webkit-transition: color, background-color 0.1s linear, max-width 1s ease;
   -moz-transition: color, background-color 0.1s linear, max-width 1s ease;
@@ -2081,66 +2191,60 @@ input[type=search], select, input[type=file] {
   outline: none;
 }
 
-/* line 93, ../../static/scss/global/_forms.scss */
+/* line 94, ../../static/scss/global/_forms.scss */
 textarea {
   min-height: 144px;
 }
 
-/* line 98, ../../static/scss/global/_forms.scss */
+/* line 99, ../../static/scss/global/_forms.scss */
 .search-form {
   position: relative;
 }
-/* line 101, ../../static/scss/global/_forms.scss */
-.search-form button, .search-form .check-buttons label, .check-buttons .search-form label {
+/* line 102, ../../static/scss/global/_forms.scss */
+.search-form button {
   position: absolute;
   right: 0;
   top: 0;
 }
 
-/* line 109, ../../static/scss/global/_forms.scss */
+/* line 110, ../../static/scss/global/_forms.scss */
 .search-input,
 input[type=search] {
   overflow: hidden;
 }
 
-/* line 119, ../../static/scss/global/_forms.scss */
-select {
-  width: 100%;
-}
-
-/* line 141, ../../static/scss/global/_forms.scss */
+/* line 140, ../../static/scss/global/_forms.scss */
 .check-list {
   list-style: none;
   margin: 0;
 }
 
-/* line 149, ../../static/scss/global/_forms.scss */
+/* line 148, ../../static/scss/global/_forms.scss */
 .check-label,
 .check-list label,
 .check-list .label {
   display: inline-block;
 }
 
-/* line 166, ../../static/scss/global/_forms.scss */
+/* line 165, ../../static/scss/global/_forms.scss */
 .extra-help {
   display: inline-block;
   visibility: hidden;
 }
 
-/* line 171, ../../static/scss/global/_forms.scss */
+/* line 170, ../../static/scss/global/_forms.scss */
 .text-input:active + .extra-help, textarea:active + .extra-help, .search-input:active + .extra-help,
-input[type=search]:active + .extra-help, select:active + .extra-help, input[type=file]:active + .extra-help,
+input[type=search]:active + .extra-help, input[type=file]:active + .extra-help,
 .text-input:focus + .extra-help,
 textarea:focus + .extra-help,
 .search-input:focus + .extra-help,
 input[type=search]:focus + .extra-help,
-select:focus + .extra-help,
 input[type=file]:focus + .extra-help {
   visibility: visible;
 }
 
 @media only screen and (min-width: 48em) {
-  /* line 200, ../../static/scss/global/_forms.scss */
+  /* line 199, ../../static/scss/global/_forms.scss */
   fieldset h2,
   .field {
     -webkit-box-sizing: border-box;
@@ -2150,221 +2254,25 @@ input[type=file]:focus + .extra-help {
     clear: both;
   }
 
-  /* line 204, ../../static/scss/global/_forms.scss */
+  /* line 203, ../../static/scss/global/_forms.scss */
   .field--half {
     width: 50%;
     float: left;
   }
-  /* line 208, ../../static/scss/global/_forms.scss */
+  /* line 207, ../../static/scss/global/_forms.scss */
   .field--half + .field--half {
     clear: none;
   }
-  /* line 211, ../../static/scss/global/_forms.scss */
+  /* line 210, ../../static/scss/global/_forms.scss */
   .field--half + .field--half + .field--half {
     clear: left;
     padding-left: 0;
   }
-  /* line 215, ../../static/scss/global/_forms.scss */
+  /* line 214, ../../static/scss/global/_forms.scss */
   .field--half + .field--half + .field--half + .field--half {
     clear: none;
   }
 }
-/* line 3, ../../static/scss/global/_switches.scss */
-.switch {
-  -webkit-transition: all 0.2s linear;
-  -moz-transition: all 0.2s linear;
-  -o-transition: all 0.2s linear;
-  transition: all 0.2s linear;
-  position: relative;
-  padding: 0;
-  display: inline-block;
-  overflow: hidden;
-  height: 2.25rem;
-  line-height: 2.66;
-  margin-bottom: 0.375rem;
-}
-/* line 15, ../../static/scss/global/_switches.scss */
-.switch label {
-  -webkit-transition: opacity 0.3s linear;
-  -moz-transition: opacity 0.3s linear;
-  -o-transition: opacity 0.3s linear;
-  transition: opacity 0.3s linear;
-  position: relative;
-  float: left;
-  z-index: 2;
-  height: 100%;
-  left: 0;
-  margin: 0;
-  text-align: left;
-}
-/* line 26, ../../static/scss/global/_switches.scss */
-.switch label:first-of-type {
-  padding: 0 1rem 0 1rem;
-}
-/* line 29, ../../static/scss/global/_switches.scss */
-.switch label:last-of-type {
-  padding: 0 1rem 0 0;
-}
-/* line 34, ../../static/scss/global/_switches.scss */
-.switch input {
-  position: absolute;
-  z-index: 3;
-  opacity: 0;
-  width: 100%;
-  height: 100%;
-  -moz-appearance: none;
-  cursor: pointer;
-}
-/* line 43, ../../static/scss/global/_switches.scss */
-.switch input:first-of-type:checked ~ span:last-child {
-  left: 100%;
-  margin-left: -2.1875rem;
-}
-/* line 49, ../../static/scss/global/_switches.scss */
-.switch span:last-child {
-  -webkit-transition: all 0.2s linear;
-  -moz-transition: all 0.2s linear;
-  -o-transition: all 0.2s linear;
-  transition: all 0.2s linear;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -o-border-radius: 3px;
-  border-radius: 3px;
-  position: absolute;
-  top: -1px;
-  left: -1px;
-  z-index: 1;
-  display: block;
-  padding: 0;
-  border-width: 0.0625rem;
-  border-style: solid;
-  cursor: pointer;
-  width: 2.25rem;
-  height: 2.25rem;
-}
-/* line 66, ../../static/scss/global/_switches.scss */
-.switch input:not(:checked) + label {
-  opacity: 0;
-}
-/* line 68, ../../static/scss/global/_switches.scss */
-.switch input:checked {
-  display: none !important;
-}
-/* line 69, ../../static/scss/global/_switches.scss */
-.switch input {
-  left: 0;
-  display: block !important;
-}
-/* line 73, ../../static/scss/global/_switches.scss */
-.switch input:first-of-type + label,
-.switch input:first-of-type + span + label {
-  left: -50%;
-}
-/* line 75, ../../static/scss/global/_switches.scss */
-.switch input:first-of-type:checked + label,
-.switch input:first-of-type:checked + span + label {
-  left: 0%;
-}
-/* line 79, ../../static/scss/global/_switches.scss */
-.switch input:last-of-type + label,
-.switch input:last-of-type + span + label {
-  right: -50%;
-  left: auto;
-  text-align: right;
-}
-/* line 81, ../../static/scss/global/_switches.scss */
-.switch input:last-of-type:checked + label,
-.switch input:last-of-type:checked + span + label {
-  right: 0%;
-  left: auto;
-}
-
-/* line 1, ../../static/scss/global/_sliders.scss */
-.ui-slider {
-  padding-left: 12px;
-  padding-left: 0.75rem;
-  padding-right: 12px;
-  padding-right: 0.75rem;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  box-sizing: border-box;
-  position: relative;
-  text-align: left;
-  height: 1.5rem;
-}
-
-/* line 7, ../../static/scss/global/_sliders.scss */
-.ui-slider .ui-slider-handle {
-  position: absolute;
-  z-index: 2;
-  width: 1.5rem;
-  height: 1.5rem;
-  cursor: pointer;
-  outline: none;
-  top: 0;
-}
-
-/* line 16, ../../static/scss/global/_sliders.scss */
-.ui-slider .ui-slider-handle:first-of-type {
-  margin-right: -1.5rem;
-}
-
-/* line 19, ../../static/scss/global/_sliders.scss */
-.ui-slider .ui-slider-handle:last-child {
-  margin-left: -1.5rem;
-}
-
-/* line 23, ../../static/scss/global/_sliders.scss */
-.ui-slider .ui-slider-range {
-  position: absolute;
-  z-index: 1;
-  display: block;
-}
-
-/* line 29, ../../static/scss/global/_sliders.scss */
-.ui-slider-horizontal .ui-slider-range-min {
-  left: -1px;
-}
-
-/* line 33, ../../static/scss/global/_sliders.scss */
-.ui-slider-horizontal .ui-slider-range-max {
-  right: -1px;
-}
-
-/* line 4, ../../static/scss/global/_check-buttons.scss */
-.check-buttons label {
-  -webkit-transition: all 0.1s linear;
-  -moz-transition: all 0.1s linear;
-  -o-transition: all 0.1s linear;
-  transition: all 0.1s linear;
-  position: relative;
-  display: block;
-  float: left;
-  text-align: center;
-}
-/* line 12, ../../static/scss/global/_check-buttons.scss */
-.check-buttons input {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 3;
-  opacity: 0;
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
-  -moz-appearance: none;
-}
-/* line 25, ../../static/scss/global/_check-buttons.scss */
-.check-buttons span {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 /* line 53, ../../static/scss/global/_tables.scss */
 table {
   -webkit-box-sizing: border-box;
@@ -2781,197 +2689,164 @@ section {
   float: left;
 }
 
-/* General styles for the modal */
-/* line 3, ../../static/scss/modules/_modals.scss */
-.md-modal {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  width: 50%;
-  max-width: 630px;
-  min-width: 320px;
-  height: auto;
-  z-index: 2000;
-  visibility: hidden;
-  -webkit-backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -webkit-transform: translateX(-50%) translateY(-50%);
-  -moz-transform: translateX(-50%) translateY(-50%);
-  -ms-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%);
+/* line 3, ../../static/scss/modules/_switches.scss */
+.switch {
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+  position: relative;
+  padding: 0;
+  display: inline-block;
+  overflow: hidden;
+  height: 2.25rem;
+  line-height: 2.66;
+  background: #333333;
+  margin-bottom: 0.375rem;
 }
-/* line 21, ../../static/scss/modules/_modals.scss */
-.md-modal .content {
-  -webkit-box-shadow: 2px 0px 2px rgba(0, 0, 0, 0.3), -1px 1px 4px rgba(0, 0, 0, 0.4);
-  -moz-box-shadow: 2px 0px 2px rgba(0, 0, 0, 0.3), -1px 1px 4px rgba(0, 0, 0, 0.4);
-  box-shadow: 2px 0px 2px rgba(0, 0, 0, 0.3), -1px 1px 4px rgba(0, 0, 0, 0.4);
+/* line 15, ../../static/scss/modules/_switches.scss */
+.switch label {
+  -webkit-transition: opacity 0.3s linear;
+  -moz-transition: opacity 0.3s linear;
+  -o-transition: opacity 0.3s linear;
+  transition: opacity 0.3s linear;
+  position: relative;
+  color: white;
+  float: left;
+  z-index: 2;
+  height: 100%;
+  left: 0;
+  margin: 0;
+  text-align: left;
 }
-/* line 28, ../../static/scss/modules/_modals.scss */
-.md-modal .md-content > *:last-child,
-.md-modal .md-content > *:last-child > *:last-child,
-.md-modal .md-content > *:last-child > *:last-child > *:last-child {
-  margin-bottom: 0 !important;
+/* line 26, ../../static/scss/modules/_switches.scss */
+.switch label:first-of-type {
+  padding: 0 1rem 0 1rem;
 }
-/* line 33, ../../static/scss/modules/_modals.scss */
-.md-modal .md-content > *:first-child,
-.md-modal .md-content > *:first-child > *:first-child,
-.md-modal .md-content > *:first-child > *:first-child > *:first-child {
-  margin-top: 0 !important;
+/* line 29, ../../static/scss/modules/_switches.scss */
+.switch label:last-of-type {
+  padding: 0 1rem 0 0;
 }
-
-/* line 39, ../../static/scss/modules/_modals.scss */
-.md-show {
-  visibility: visible;
-}
-/* line 42, ../../static/scss/modules/_modals.scss */
-.md-show .content {
-  -webkit-box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.6);
-  -moz-box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.6);
-  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.6);
-  border: 1px solid rgba(0, 0, 0, 0.1);
-}
-
-/* line 48, ../../static/scss/modules/_modals.scss */
-.md-overlay {
-  position: fixed;
+/* line 34, ../../static/scss/modules/_switches.scss */
+.switch input {
+  position: absolute;
+  z-index: 3;
+  opacity: 0;
   width: 100%;
   height: 100%;
-  visibility: hidden;
-  background-color: rgba(255, 255, 255, 0.5);
+  -moz-appearance: none;
+  cursor: pointer;
+}
+/* line 43, ../../static/scss/modules/_switches.scss */
+.switch input:first-of-type:checked ~ span:last-child {
+  left: 100%;
+  margin-left: -2.1875rem;
+}
+/* line 49, ../../static/scss/modules/_switches.scss */
+.switch span:last-child {
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: 2px 0 10px 0 rgba(0, 0, 0, 0.07), 1000px 0 0 980px black, -2px 0 10px 0 rgba(0, 0, 0, 0.07), -1000px 0 0 1000px red;
+  -moz-box-shadow: 2px 0 10px 0 rgba(0, 0, 0, 0.07), 1000px 0 0 980px black, -2px 0 10px 0 rgba(0, 0, 0, 0.07), -1000px 0 0 1000px red;
+  box-shadow: 2px 0 10px 0 rgba(0, 0, 0, 0.07), 1000px 0 0 980px black, -2px 0 10px 0 rgba(0, 0, 0, 0.07), -1000px 0 0 1000px red;
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  z-index: 1;
+  display: block;
+  padding: 0;
+  border-width: 0.0625rem;
+  border-style: solid;
+  cursor: pointer;
+  width: 2.25rem;
+  height: 2.25rem;
+}
+/* line 67, ../../static/scss/modules/_switches.scss */
+.switch input:not(:checked) + label {
+  opacity: 0;
+}
+/* line 69, ../../static/scss/modules/_switches.scss */
+.switch input:checked {
+  display: none !important;
+}
+/* line 70, ../../static/scss/modules/_switches.scss */
+.switch input {
+  left: 0;
+  display: block !important;
+}
+/* line 74, ../../static/scss/modules/_switches.scss */
+.switch input:first-of-type + label,
+.switch input:first-of-type + span + label {
+  left: -50%;
+}
+/* line 76, ../../static/scss/modules/_switches.scss */
+.switch input:first-of-type:checked + label,
+.switch input:first-of-type:checked + span + label {
+  left: 0%;
+}
+/* line 80, ../../static/scss/modules/_switches.scss */
+.switch input:last-of-type + label,
+.switch input:last-of-type + span + label {
+  right: -50%;
+  left: auto;
+  text-align: right;
+}
+/* line 82, ../../static/scss/modules/_switches.scss */
+.switch input:last-of-type:checked + label,
+.switch input:last-of-type:checked + span + label {
+  right: 0%;
+  left: auto;
+}
+
+/* line 5, ../../static/scss/modules/_check-buttons.scss */
+.check-buttons label,
+.radio-buttons label {
+  -webkit-transition: all 0.1s linear;
+  -moz-transition: all 0.1s linear;
+  -o-transition: all 0.1s linear;
+  transition: all 0.1s linear;
+  position: relative;
+  display: block;
+  float: left;
+  padding: 0.375rem;
+  margin-right: 1px;
+  background: #333333;
+  color: white;
+  text-align: center;
+}
+/* line 16, ../../static/scss/modules/_check-buttons.scss */
+.check-buttons input,
+.radio-buttons input {
+  position: absolute;
   top: 0;
   left: 0;
-  z-index: 1000;
+  right: 0;
+  bottom: 0;
+  z-index: 3;
   opacity: 0;
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  transition: all 0.3s;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  -moz-appearance: none;
 }
-
-/* line 63, ../../static/scss/modules/_modals.scss */
-.md-show ~ .md-overlay {
-  opacity: 0.4;
-  visibility: visible;
+/* line 29, ../../static/scss/modules/_check-buttons.scss */
+.check-buttons span,
+.radio-buttons span {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
-
-/* Effect 7:  slide and stick to top */
-/* line 69, ../../static/scss/modules/_modals.scss */
-.md-effect-7 {
-  top: 0;
-  -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
-}
-
-/* line 77, ../../static/scss/modules/_modals.scss */
-.md-effect-7 .md-content {
-  -webkit-transform: translateY(-200%);
-  -moz-transform: translateY(-200%);
-  -ms-transform: translateY(-200%);
-  transform: translateY(-200%);
-  -webkit-transition: all .3s;
-  -moz-transition: all .3s;
-  transition: all .3s;
-  opacity: 0;
-}
-
-/* line 88, ../../static/scss/modules/_modals.scss */
-.md-show.md-effect-7 .md-content {
-  -webkit-transform: translateY(0%);
-  -moz-transform: translateY(0%);
-  -ms-transform: translateY(0%);
-  transform: translateY(0%);
-  border-radius: 0 0 3px 3px;
-  opacity: 1;
-}
-
-/*------------------------------------*\
-		$CODE
-\*------------------------------------*/
-/**
- * Use an explicit font stack to ensure browsers render correct `line-height`.
- */
-/* line 7, ../../static/scss/modules/_code.scss */
-pre {
-  overflow: auto;
-}
-
-/* line 10, ../../static/scss/modules/_code.scss */
-pre mark {
-  background: none;
-  border-bottom: 1px solid;
-  color: inherit;
-}
-
-/**
- * Add comments to your code examples, e.g.:
- *
-	 <code>&lt;/div&gt;<span class=code-comment>&lt;!-- /wrapper --&gt;</span></code>
- *
- */
-/* line 23, ../../static/scss/modules/_code.scss */
-.code-comment {
-  /**
-   * Override this setting in your theme stylesheet
-   */
-  opacity: 0.75;
-  filter: alpha(opacity=75);
-}
-
-/* line 33, ../../static/scss/modules/_code.scss */
-.code-block {
-  padding: 24px;
-  padding: 1.5rem;
-  color: white;
-}
-
-/* line 40, ../../static/scss/modules/_code.scss */
-code {
-  font-family: monospace;
-  color: white;
-}
-
-/**
- * You can add line numbers to your code examples but be warned, it requires
- * some pretty funky looking markup, e.g.:
- *
-	 <ol class=line-numbers>
-			 <li><code>.nav{</code></li>
-			 <li><code>    list-style:none;</code></li>
-			 <li><code>    margin-left:0;</code></li>
-			 <li><code>}</code></li>
-			 <li><code>    .nav > li,</code></li>
-			 <li><code>        .nav > li > a{</code></li>
-			 <li><code>            display:inline-block;</code></li>
-			 <li><code>           *display:inline-block;</code></li>
-			 <li><code>            zoom:1;</code></li>
-			 <li><code>        }</code></li>
-	 </ol>
- *
- * 1. Make the list look like code.
- * 2. Give the list flush numbers with a leading zero.
- * 3. Make sure lines of code don’t wrap.
- * 4. Give the code form by forcing the `code` to honour white-space.
- */
-/* line 68, ../../static/scss/modules/_code.scss */
-.line-numbers {
-  font-family: monospace;
-  /* [1] */
-  list-style: decimal-leading-zero inside;
-  /* [2] */
-  white-space: nowrap;
-  /* [3] */
-  overflow: auto;
-  /* [3] */
-  margin-left: 0;
-  margin-bottom: 0;
-}
-
-/* line 76, ../../static/scss/modules/_code.scss */
-.line-numbers code {
-  white-space: pre;
-  /* [4] */
+/* line 34, ../../static/scss/modules/_check-buttons.scss */
+.check-buttons .checked,
+.radio-buttons .checked {
+  background: red;
 }
 
 /* line 1, ../../static/scss/modules/_gallery.scss */

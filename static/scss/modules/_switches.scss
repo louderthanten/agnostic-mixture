@@ -9,13 +9,13 @@
 	overflow: hidden;
 	height:rem($line*1.5);
 	line-height: 2.66;
-	//background:$dark-grey;
+	background:$dark-grey;
 	margin-bottom: rem($line/4);
 
 	label {
 		@include transition(opacity 0.3s linear);
 		position: relative;
-		//color:$grey;
+		color:$white;
 		float:left;
 		z-index: 2;
 		height: 100%;
@@ -49,6 +49,7 @@
   span:last-child {
   	@include transition(all 0.2s linear);
   	@include border-radius;
+  	@include box-shadow(2px 0 10px 0 rgba(0,0,0,0.07),1000px 0 0 980px black, -2px 0 10px 0 rgba(0,0,0,0.07), -1000px 0 0 1000px $red);
     position: absolute;
     top: -1px;
     left: -1px;
@@ -57,7 +58,7 @@
     padding: 0;
     border-width: rem(1px);
     border-style: solid;
-    //border-color: darken($grey, 20);
+    //border-color: $dark-grey;
     cursor: pointer;
     width: rem($line*1.5);
     height: rem($line*1.5);

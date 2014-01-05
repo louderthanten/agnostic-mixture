@@ -41,6 +41,9 @@ code {
 	font-family: $mono;
 	color:$white;
 }
+.code__comment {
+	color:lighten($dark-grey, 33);
+}
 
 /**
  * You can add line numbers to your code examples but be warned, it requires
@@ -73,6 +76,6 @@ code {
 		margin-left:0;
 		margin-bottom: 0;
 }
-		.line-numbers code{
-				white-space:pre;                    /* [4] */
-		}
+.line-numbers code{
+		white-space:pre;                    /* [4] */
+}
