@@ -1,4 +1,11 @@
 {
+  "autoPrefixer": {
+    "active": true,
+    "browsers": [
+      "last 2 versions",
+      "> 5%"
+    ]
+  },
   "debug": true,
   "domain": null,
   "lintScripts": false,
