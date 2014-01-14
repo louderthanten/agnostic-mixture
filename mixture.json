@@ -23,5 +23,5 @@
   "templateDefaultPage": "index",
   "templateDirectory": "templates",
   "type": "mixture",
-  "useCompass": true
+  "useCompass": false
 }
