@@ -1,0 +1,167 @@
+{% block content %}
+
+<section class="components">
+    <div class="container">
+        <h1>Components</h1>
+        <p>Components combine bits and peices into small reusable pieces that act as the building blocks to our modules and layouts.</p>
+    </div>
+</section>
+
+<section class="navigation">
+    <div class="container">
+        <h1>Navigation</h1>
+        <hr>
+        <h2>Breadcrumbs</h2>
+    </div>
+    {% include "modules/breadcrumbs" %}
+
+    <div class="container">
+
+        <h2>Pagination</h2>
+        <hr>
+        <h3>Standard</h3>
+        {% include "modules/pagination" %}
+
+        <h3>Mini</h3>
+        {% include "modules/pagination--mini" %}
+
+        <h2>More links</h2>
+        <hr>
+        <p class="more"><a href="">Read more &gt;</a></p>
+    </div>
+
+
+</section>
+<section class="callouts">
+
+    <div class="container">
+        <h1>Callouts</h1>
+        <hr />
+
+        <aside class="callout">
+            <div class="content reverse">
+                <h2>Content Callout</h2>
+                <p>Callout content is a related aside that doesn't fit directly inside normal page content. It may also my use to highlight important sections. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
+            </div>
+        </aside>
+
+        <aside class="callout">
+            <figure>
+                {{ "1200x800" | placeholder | image_tag }}
+            </figure>
+            <div class="content">
+                <h2>Image Callout</h2>
+                <p>Callout content is a related aside that doesn't fit directly inside normal page content. It may also my use to highlight important sections. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
+            </div>
+        </aside>
+
+        <aside class="callout">
+            <figure class="video">
+                <iframe src="//player.vimeo.com/video/13752801"  frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            </figure>
+            <div class="content">
+                <h2>Video Callout</h2>
+                <p>Callout content is a related aside that doesn't fit directly inside normal page content. It may also my use to highlight important sections. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
+            </div>
+        </aside>
+
+        <aside class="callout">
+            <div class="content reverse">
+                <h2>Form Callout</h2>
+                <p>Callout content is a related aside that doesn't fit directly inside normal page content.</p>
+                <form action="">
+                    <div class="field">
+                        <input type="text" class="text-input" placeholder="Name" />
+                    </div>
+                    <div class="field">
+                        <input type="email" class="text-input" placeholder="Email" />
+                    </div>
+
+                    <button type="submit" class="button--red button--small">Submit</button>
+                </form>
+            </div>
+        </aside>
+
+    </div>
+</section>
+
+<section class="hidden-content">
+    <div class="container">
+        <h1>Hidden Content</h1>
+        <hr />
+        <h2>Page-wide drawer</h2>
+        <p><a href="#drawer" class="button js-reveal">Open drawer</a></p>
+    </div>
+</section>
+<section class="drawer reverse" id="drawer">
+    <div class="container">
+        <div class="content">
+            <h2>Hidden drawer</h2>
+            <p>A page wide drawer for hidden content, like the sign-in form below:</p>
+        </div>
+        <form action="" class="sign-in-form form--mini" id="sign-in-form">
+            <fieldset>
+                <h2>Sign in</h2>
+                <div class="field">
+                    <label for="username">Username</label>
+                    <input type="text" name="username" class="text-input" id="username" required>
+                </div>
+                <div class="field">
+                    <label for="password">Password <a href="" class="js-show-pw small right">Show password</a></label>
+                    <input type="password" name="password" class="text-input" id="password" required>
+
+                    <p><a href="">Forgot password</a></p>
+                </div>
+                <div class="field">
+                    <label for="remember" class="check-label"><input type="checkbox" name="remember" value="yes" checked="checked" /> Rembemer me</label>
+                </div>
+                <div class="field">
+                    <button type="submit" class="button--light-blue button--small">Sign in</button>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</section>
+<section class="callouts">
+    <div class="container">
+        <h2>Callout drawers</h2>
+    </div>
+    <div class="container">
+        <aside class="callout">
+            <div class="content reverse">
+                <h2>Callout Drawer</h2>
+                <p>Callout content is a related aside that doesn't fit directly inside normal page content.</p>
+                <p><a href="#callout-drawer-1" class="js-reveal button">Open drawer</a></p>
+
+                <form action="" id="callout-drawer-1" class="drawer">
+                    <div class="field">
+                        <input type="text" class="text-input" placeholder="Name" />
+                    </div>
+                    <div class="field">
+                        <input type="email" class="text-input" placeholder="Email" />
+                    </div>
+                     <button type="submit" class="button--red button--small">Submit</button>
+                </form>
+            </div>
+        </aside>
+
+    </div>
+</section>
+<section class="media">
+    <div class="container">
+        <h1>Media</h1>
+        <hr />
+        <h2>Responsive image</h2>
+        <figure>
+            {{ "2500x1666" | placeholder | image_tag }}
+            <figcaption><p>Explanatory caption to compliment image. <small class="source">Photographer: First Last</small></p></figcaption>
+        </figure>
+
+        <h2>Responsive embedded video</h2>
+        <figure class="video">
+            <iframe src="//player.vimeo.com/video/13752801"  frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        </figure>
+
+    </div>
+</section>
+{% endblock %}

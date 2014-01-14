@@ -23,8 +23,9 @@
 
 // Colors
 // Add more here and in the Color liquid template if you need.
-.color1 { background:$dark-grey; }
-.color2 { background: $red; }
+.color1 { background: $dark-grey; }
+.color2 { background: $grey; }
+.color3 { background: $red; }
 
 //
 // End customizations
@@ -69,6 +70,11 @@ nav {
 
 // Type Section
 .type-sample {
+    padding-top:rem($line);
+    padding-bottom:rem($line);
+    margin-bottom: rem($line);
+    border-top: $keyline;
+
     p {
         @include font-size(24, 36);
         margin-bottom: rem($line*1.5);
@@ -132,51 +138,66 @@ nav {
         hr {
             clear:both;
         }
-        div {
-            margin-bottom: $line;
-            height: $line*10;
-            float:left;
-            @include wrap;
-
-            span {
-                display: block;
-                width:100%;
-                height: $line*10;
-            }
-        }
     }
-    span {
-        background:$dark-grey;
+    .folding {
+        margin-bottom: $line;
+        height: $line*10;
+        float:left;
+        @include wrap;
+
+        span {
+            display: block;
+            width:100%;
+            height: $line*10;
+            background:$dark-grey;
+        }
     }
     h2 {
         clear:both;
     }
 }
-.three {
-    width:$c3;
-}
-.five {
-    width:$c5;
-}
-.six {
-    width:$c6;
-}
 
-.folding {
-    &.four,
-    &.five,
-    &.six,
-    &.seven,
-    &.eight {
-        display:none;
+.grid {
+    @extend %group;
+    &.grid--3-6-12 {
+        .three {
+            width:$c3;
+            display: block !important;
+        }
+        .six,
+        .twelve {
+            display: none;
+        }
     }
-    &.two {
-        display: block !important;
-        width:$c4*2;
+    &.grid--2-4-8 {
+        .two {
+            width:$c4*2;
+            display: block !important;
+        }
+        .four,
+        .eight {
+            display: none;
+        }
     }
-    &.three {
-        display: block !important;
-        width:$c3;
+    &.grid--3-5-7 {
+        .three {
+            width:$c3;
+            display: block !important;
+        }
+        .five,
+        .seven {
+            display: none;
+        }
+    }
+    &.grid--4-8-16 {
+        .four {
+            width:$c4;
+            display: block !important;
+        }
+        .eight,
+        .sixteen {
+            display: none;
+        }
     }
 }
 
@@ -197,19 +218,52 @@ nav {
 }
 
 @media only screen and (min-width: $screenSmall) {
+    .paragraphs {
+        width:$c4*3;
+    }
     .iconset {
         @include wrap;
         width:$c8*4;
         float:left;
     }
-    .folding {
-        &.four{
-            display: block;
-            width:$c4;
+    .grid {
+        padding:0 !important;
+
+        &.grid--2-4-8 {
+            .four {
+                width:$c4;
+                display: block !important;
+            }
+            .eight {
+                display: none;
+            }
         }
-        &.five {
-            display:block;
-            width:$c5;
+        &.grid--3-5-7 {
+            .five {
+                width:$c5;
+                display: block !important;
+            }
+            .seven {
+                display: none;
+            }
+        }
+        &.grid--3-6-12 {
+            .six {
+                width:$c6;
+                display: block !important;
+            }
+            .twelve {
+                display: none;
+            }
+        }
+        &.grid--4-8-16 {
+            .eight {
+                width:$c8;
+                display: block !important;
+            }
+            .sixteen {
+                display: none;
+            }
         }
     }
     .callouts {
@@ -226,6 +280,13 @@ nav {
 }
 
 @media only screen and (min-width: $screenLarge) {
+    .type-sample {
+        width:$c4*2;
+        float:left;
+    }
+    .paragraphs {
+        width:$c4*2;
+    }
     .iconset {
         width:$c6*2;
     }
@@ -233,18 +294,31 @@ nav {
 
 @media only screen and (min-width: $screenXlarge) {
 
-    .folding {
-        &.six {
-            display: block;
-            width:$c6;
+    .grid {
+
+        &.grid--2-4-8 {
+            .eight {
+                width:$c8;
+                display: block !important;
+            }
         }
-        &.seven {
-            display:block;
-            width:$c7;
+        &.grid--3-5-7 {
+            .seven {
+                width:$c7;
+                display: block !important;
+            }
         }
-        &.eight {
-            display:block;
-            width:$c8;
+        &.grid--3-6-12 {
+            .twelve {
+                width:$c12;
+                display: block !important;
+            }
+        }
+        &.grid--4-8-16 {
+            .sixteen {
+                width:$c16;
+                display: block !important;
+            }
         }
     }
     .callouts {
@@ -253,9 +327,6 @@ nav {
 
             &:nth-child(odd) {
                 clear:none;
-            }
-            &:nth-child(4n+5) {
-                clear:both;
             }
         }
     }

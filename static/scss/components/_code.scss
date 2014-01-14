@@ -17,6 +17,7 @@ pre{
 .code-block {
     @extend .reverse;
     padding:rem($line);
+    margin-bottom: rem($line);
     color:$white;
 }
 
@@ -28,7 +29,7 @@ code {
 // Code comments
 // EG) <code>&lt;/div&gt;<span class="code__comment">&lt;!-- Nice comment, dude. --&gt;</span></code>
 .code__comment{
-
+    color: $grey;
 }
 
 //  Numbered code blocks. Ugly code, but works well.

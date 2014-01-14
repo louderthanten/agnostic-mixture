@@ -41,15 +41,17 @@ a.button {
 }
 
 // Add color variations here
-a.button--color {
+.button--red,
+a.button--red {
+    background:$red;
 
     &:link,
     &:visited {
-
+        background:$red;
     }
 
     &:hover {
-
+        background: $grey;
     }
 
     &:active,

@@ -1176,7 +1176,8 @@ ul, ol, dl {
   margin: 0 0 1.5rem 0;
   padding: 0; }
   ul ul, ul ol, ol ul, ol ol, dl ul, dl ol {
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    margin-left: 1.5rem; }
 
 
 
@@ -1209,6 +1210,12 @@ button, input[type="submit"], .button, a.button {
     background: red;
     color: #FFFFFF; }
 
+.button--red, a.button--red {
+  background: red; }
+  .button--red:link, .button--red:visited, a.button--red:link, a.button--red:visited {
+    background: red; }
+  .button--red:hover, a.button--red:hover {
+    background: #999999; }
 
 a.button--disabled, a.button--disabled:hover, a.button--disabled:active, a.button--disabled:focus, .button--disabled, .button--disabled:hover, .button--disabled:active, .button--disabled:focus {
   cursor: default; }
@@ -1477,12 +1484,15 @@ pre {
 
 .code-block {
   padding: 1.5rem;
+  margin-bottom: 1.5rem;
   color: #FFFFFF; }
 
 code {
   font-family: monospace;
   color: #FFFFFF; }
 
+.code__comment {
+  color: #999999; }
 
 .line-numbers {
   font-family: monospace;
@@ -1572,8 +1582,7 @@ figcaption .source {
 
 .breadcrumbs {
   padding-top: 0.75rem;
-  margin-bottom: 1.5rem;
-  border-top: 1px solid #4d4d4d; }
+  margin-bottom: 1.5rem; }
 
 .pagination {
   margin-top: 1.5rem; }

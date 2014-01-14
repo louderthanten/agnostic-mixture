@@ -43,12 +43,12 @@
 .clear {
   clear: both; }
 
-nav ul {
+nav ul, .grid {
   zoom: 1; }
-  nav ul:before, nav ul:after {
+  nav ul:before, .grid:before, nav ul:after, .grid:after {
     content: " ";
     display: table; }
-  nav ul:after {
+  nav ul:after, .grid:after {
     clear: both; }
 
 
@@ -74,6 +74,9 @@ nav ul {
   background: #333333; }
 
 .color2 {
+  background: #999999; }
+
+.color3 {
   background: red; }
 
 
@@ -92,12 +95,17 @@ nav {
       display: block;
       padding-right: 12px; }
 
-.type-sample p {
-  font-size: 24px;
-  font-size: 1.5rem;
-  line-height: 1.5;
-  margin-bottom: 2.25rem;
-  letter-spacing: 0.1em; }
+.type-sample {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-top: 1px solid #4d4d4d; }
+  .type-sample p {
+    font-size: 24px;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    margin-bottom: 2.25rem;
+    letter-spacing: 0.1em; }
 
 .scale {
   max-width: 30em; }
@@ -137,7 +145,7 @@ nav {
 
 .grids .container hr {
   clear: both; }
-.grids .container div {
+.grids .folding {
   margin-bottom: 24px;
   height: 240px;
   float: left;
@@ -149,32 +157,34 @@ nav {
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box; }
-  .grids .container div span {
+  .grids .folding span {
     display: block;
     width: 100%;
-    height: 240px; }
-.grids span {
-  background: #333333; }
+    height: 240px;
+    background: #333333; }
 .grids h2 {
   clear: both; }
 
-.three {
-  width: 33.33333%; }
-
-.five {
-  width: 20%; }
-
-.six {
-  width: 16.66667%; }
-
-.folding.four, .folding.five, .folding.six, .folding.seven, .folding.eight {
+.grid.grid--3-6-12 .three {
+  width: 33.33333%;
+  display: block !important; }
+.grid.grid--3-6-12 .six, .grid.grid--3-6-12 .twelve {
   display: none; }
-.folding.two {
-  display: block !important;
-  width: 50%; }
-.folding.three {
-  display: block !important;
-  width: 33.33333%; }
+.grid.grid--2-4-8 .two {
+  width: 50%;
+  display: block !important; }
+.grid.grid--2-4-8 .four, .grid.grid--2-4-8 .eight {
+  display: none; }
+.grid.grid--3-5-7 .three {
+  width: 33.33333%;
+  display: block !important; }
+.grid.grid--3-5-7 .five, .grid.grid--3-5-7 .seven {
+  display: none; }
+.grid.grid--4-8-16 .four {
+  width: 25%;
+  display: block !important; }
+.grid.grid--4-8-16 .eight, .grid.grid--4-8-16 .sixteen {
+  display: none; }
 
 .combined-grid {
   position: relative;
@@ -190,6 +200,8 @@ nav {
     padding: 0 !important; }
 
 @media only screen and (min-width: 48em) {
+  .paragraphs {
+    width: 75%; }
   .iconset {
     padding-left: 12px;
     padding-left: 0.75rem;
@@ -201,12 +213,28 @@ nav {
     box-sizing: border-box;
     width: 50%;
     float: left; }
-  .folding.four {
-    display: block;
-    width: 25%; }
-  .folding.five {
-    display: block;
-    width: 20%; }
+  .grid {
+    padding: 0 !important; }
+    .grid.grid--2-4-8 .four {
+      width: 25%;
+      display: block !important; }
+    .grid.grid--2-4-8 .eight {
+      display: none; }
+    .grid.grid--3-5-7 .five {
+      width: 20%;
+      display: block !important; }
+    .grid.grid--3-5-7 .seven {
+      display: none; }
+    .grid.grid--3-6-12 .six {
+      width: 16.66667%;
+      display: block !important; }
+    .grid.grid--3-6-12 .twelve {
+      display: none; }
+    .grid.grid--4-8-16 .eight {
+      width: 12.5%;
+      display: block !important; }
+    .grid.grid--4-8-16 .sixteen {
+      display: none; }
   .callouts .callout {
     padding-left: 12px;
     padding-left: 0.75rem;
@@ -222,24 +250,30 @@ nav {
       clear: both; } }
 
 @media only screen and (min-width: 98em) {
+  .type-sample {
+    width: 50%;
+    float: left; }
+  .paragraphs {
+    width: 50%; }
   .iconset {
     width: 33.33333%; } }
 
 @media only screen and (min-width: 110em) {
-  .folding.six {
-    display: block;
-    width: 16.66667%; }
-  .folding.seven {
-    display: block;
-    width: 14.28571%; }
-  .folding.eight {
-    display: block;
-    width: 12.5%; }
+  .grid.grid--2-4-8 .eight {
+    width: 12.5%;
+    display: block !important; }
+  .grid.grid--3-5-7 .seven {
+    width: 14.28571%;
+    display: block !important; }
+  .grid.grid--3-6-12 .twelve {
+    width: 8.33333%;
+    display: block !important; }
+  .grid.grid--4-8-16 .sixteen {
+    width: 6.25%;
+    display: block !important; }
   .callouts .callout {
     width: 25%; }
     .callouts .callout:nth-child(odd) {
-      clear: none; }
-    .callouts .callout:nth-child(4n+5) {
-      clear: both; } }
+      clear: none; } }
 
 /*# sourceMappingURL=ui-kit.css.map */
