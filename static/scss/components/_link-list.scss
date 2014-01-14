@@ -1,0 +1,41 @@
+// Navigation lists
+.link-list {
+    @extend %group;
+    margin-left: 0;
+    margin-right: 0;
+
+    li {
+        position: relative;
+    }
+
+    a {
+        display: block;
+
+        &:link,
+        &:visited {
+
+        }
+        &:hover,
+        &:active,
+        &:focus {
+
+        }
+    }
+    .current {
+        a {
+            cursor: default;
+        }
+    }
+}
+
+@media only screen and (min-width: $screenSmall) {
+    .link-list--horizontal {
+        li {
+            float:left;
+
+            a {
+
+            }
+        }
+    }
+}

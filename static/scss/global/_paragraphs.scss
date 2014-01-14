@@ -53,6 +53,14 @@ sup {
     bottom: .5ex;
 }
 
+sub {
+    height: 0;
+    line-height: 1;
+    vertical-align: baseline;
+    position: relative;
+    bottom: -.5ex;
+}
+
 .highlight  {
     background: yellow;
 }

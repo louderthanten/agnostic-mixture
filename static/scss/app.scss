@@ -14,32 +14,33 @@
 @import "global/animation";
 @import "global/headings";
 @import "global/paragraphs";
-@import "global/code";
 @import "global/time-stamps";
-@import "global/vcards";
 @import "global/smallprint";
-@import "global/quotes";
 @import "global/links";
 @import "global/lists";
 @import "global/keylines";
-@import "global/images";
-@import "global/maps";
-@import "global/videos";
 @import "global/icons";
 @import "global/buttons";
 @import "global/forms";
 @import "global/tables";
-@import "global/layout";
 
+// UI Components
+@import "components/quotes";
+@import "components/code";
+@import "components/images";
+@import "components/maps";
+@import "components/videos";
+@import "components/callouts";
+@import "components/drawers";
+@import "components/breadcrumbs";
+@import "components/pagination";
+@import "components/switches";
+@import "components/option-buttons";
+@import "components/sliders";
+@import "components/gallery";
+@import "components/vcards";
 
 // UI Modules
 @import "modules/header";
-@import "modules/callouts";
-@import "modules/drawers";
-@import "modules/breadcrumbs";
-@import "modules/pagination";
-@import "modules/switches";
-@import "modules/option-buttons";
-@import "modules/sliders";
-@import "modules/gallery";
 @import "modules/footer";
+@import "modules/layout";
