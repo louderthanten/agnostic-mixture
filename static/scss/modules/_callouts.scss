@@ -1,53 +1,52 @@
+// CALLOUTS
+//
+// Good for visually sepearating related content. Let's make 'em flexible.
+// Example:
+//
+//      <aside class="callout">
+//          <div class="content">
+//              <h2>Content Callout</h2>
+//              <p>Callout content</p>
+//          </div>
+//      </aside>
+
+// .callout acts as a fluid container with padding so side by side callouts can still have a gutter separating them
 .callout {
-	@extend .group;
-	@include box;
-	@include rem(margin-bottom, $line);
+    @extend %group;
+    @include box;
+    margin-bottom:rem($line);
 
-	figure {
-		margin:0;
+    figure {
+        margin:0;
+    }
 
-		img,
-		iframe {
-			@include border-top-left-radius;
-			@include border-top-right-radius;
-		}
-	}
+    // .content is where visual styles, like backgrounds and rounded corners should be applied
 
+    .content {
+        @extend %group;
+        padding:rem($line);
 
-	.content {
-		@extend .group;
-		@include border-radius;
-		@include rem(padding, $line);
+        p {
 
-		p {
-			@include font-size(12.5, $line-n/1.1);
-		}
+        }
 
-		> *:last-child,
-		> *:last-child > *:last-child,
-		> *:last-child > *:last-child > *:last-child {
-			margin-bottom: 0 !important;
-		}
-		> *:first-child,
-		> *:first-child > *:first-child,
-		> *:first-child > *:first-child > *:first-child {
-			margin-top: 0 !important;
-		}
-	}
-
-	figure + .content {
-		@include border-top-left-radius(0px);
-		@include border-top-right-radius(0px);
-	}
+        // Remove margins from last element in the callout to help maintain consistent padding around the inside the box
+        > *:last-child,
+        > *:last-child > *:last-child,
+        > *:last-child > *:last-child > *:last-child {
+            margin-bottom: 0 !important;
+        }
+        > *:first-child,
+        > *:first-child > *:first-child,
+        > *:first-child > *:first-child > *:first-child {
+            margin-top: 0 !important;
+        }
+    }
 
 }
-.callout--reverse .content,
-.reverse {
-	@include rem(padding, $line);
-	background:$dark-grey;
-	color:$white;
 
-	> h2 {
-		@include rem(margin-top, $line*2);
-	}
+// Reverse the colours
+.reverse {
+    background:$dark-grey;
+    color:$white;
 }

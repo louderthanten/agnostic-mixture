@@ -1,36 +1,29 @@
+// RANGE SLIDERS
+
+// This slider field uses jQueryUI's slider module. Base styles can be found in the /static/scss/vendor/ folder
+// http://jqueryui.com/slider/
+//
+// Simple slider example:
+// <div id="slider" class="js-slider"></div>
+
 .ui-slider {
     @include wrap;
     position: relative;
-    text-align: left;
-    height:rem($line);
+    height:rem($line/2);
+    margin-top: rem($line);
     margin-bottom: rem($line*2);
-}
-.ui-slider .ui-slider-handle {
-    position: absolute;
-    z-index: 2;
-    width: rem($line);
-    height: rem($line);
+    text-align: left;
     cursor: pointer;
-    outline: none;
-    top:0;
-}
-.ui-slider .ui-slider-handle:first-of-type {
-    margin-right: rem($line*-1);
-}
-.ui-slider .ui-slider-handle:last-child {
-    margin-left: rem($line*-1);
-}
+    background:$dark-grey;
 
-.ui-slider .ui-slider-range {
-    position: absolute;
-    z-index: 1;
-    display: block;
-}
-
-.ui-slider-horizontal .ui-slider-range-min {
-    left: -1px;
-}
-
-.ui-slider-horizontal .ui-slider-range-max {
-    right: -1px;
+    .ui-slider-handle {
+        position: absolute;
+        top: rem($line*-.25);
+        width: rem($line);
+        height: rem($line);
+        z-index: 2;
+        cursor: pointer;
+        outline: none;
+        background:$red;
+    }
 }

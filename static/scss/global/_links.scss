@@ -1,14 +1,16 @@
+// LINKS
+
 a {
 
-	&:link,
-	&:visited {
+    &:link,
+    &:visited {
 
-	}
-	&:hover,
-	&:active,
-	&:focus {
+    }
+    &:hover,
+    &:active,
+    &:focus {
 
-	}
+    }
 }
 
 h1,
@@ -17,25 +19,25 @@ h3,
 h4,
 h5,
 h6 {
-	a {
+    a {
 
-		&:link,
-		&:visited {
+        &:link,
+        &:visited {
 
-		}
-		&:hover,
-		&:active,
-		&:focus {
+        }
+        &:hover,
+        &:active,
+        &:focus {
 
-		}
-	}
+        }
+    }
 }
 
 .more {
-	a {
+    a {
 
-		span {
+        span {
 
-		}
-	}
+        }
+    }
 }

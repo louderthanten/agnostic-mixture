@@ -1,31 +1,42 @@
+// LAYOUT
+
+// This page is for setting up our general layout structure.
+//
+// If you've been a good little developer and stuck to using rem units, we can resize our entire layout proportionally by manipulating the font-size on the html element.
+
 html {
     font-size: 100%;
     min-height: 100%;
     overflow-y:scroll;
 }
-header,
-footer,
-section {
-    @extend .group;
-    position: relative;
-}
 
-
-// Set some simple defaults for sections.
-
-// Coloured bands
+// I use .row classes for edge-to-edge page sections width full-bleed images or background colors.
+// A .container gives the content some margins and sets up the edges of the grid.
+//
+// Markup example:
+// <section class="row">
+//      <div class="container">
+//          <section class="primary-content">
+//              … Main page stuff …
+//          </section>
+//          <aside class="secondary-content">
+//              … Secondary content (sidebar perhaps?) …
+//           </aside>
+//      </div>
+//  </section>
 .row {
 
 }
 
 //Creates margins with a half-gutter on either side.
 .container {
-    @extend .group;
+    @extend %group; // Call in a clearfix style
     position:relative;
     margin: 0 $margin;
 
+    // Let's just apply border-box sizing and clearfixing to the container's immediate children while we're here.
     > * {
-        @extend .group;
+        @extend %group;
         @include box;
     }
 }
@@ -33,11 +44,6 @@ section {
 // Edge to edge container on mobile
 .container--mobile-full {
     margin: 0;
-
-    .main-content {
-        padding-left: $margin;
-        padding-right: $margin;
-    }
 }
 
 .primary-content{
@@ -48,14 +54,16 @@ section {
 }
 
 @media only screen and (min-width: $screenSmall) {
-    .container {
+    // Bring margins back to our mobile edge-to-edge styles
+    .container--mobile-full {
         margin:0 $margin;
+    }
+    .container {
+
+        // Add gutters to container's immediate children unless they have a .collapse class.
         > *:not(.collapse) {
             @include gutter;
         }
-    }
-    .page-intro {
-
     }
     .primary-content {
 
@@ -65,8 +73,11 @@ section {
     }
 }
 @media only screen and (min-width: $screenMedium) {
+    html {
+        font-size: 107.5%; // You can proportionally resize your entire layout with this line if you stick to rem units everywhere.
+    }
     .container {
-
+        margin: 0 $margin *2;  // If your layout feels like it's getting too wide, multiply the margins instead of adding a stuffy max-width.
     }
     .primary-content {
 

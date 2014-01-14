@@ -1,29 +1,41 @@
+// FORMS
+
 form {
 
 }
+
+// Let's remove some odd decisions from Normalize on fieldsets.
 fieldset {
-	@extend .group;
-	padding:0;
-	margin-left: 0 !important;
-	margin-right: 0 !important;
-	border:none;
-	display: block;
+    @extend %group;
+    padding:0;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    border:none;
+    display: block;
 }
+
+// Let's wrap our fields in a field class for easier manipulation. Here's how I generally do a required text field:
+//
+// <div class="field">
+//  <label for="field-name">Field name <sup>*<sup></label>
+//  <input type="text" name="field-name" id="field-name" class="text-input" required />
+// </div>
 
 .field {
-	@extend .group;
-	position: relative;
-	padding-bottom: rem($line);
+    @extend %group;
+    position: relative;
+    padding-bottom: rem($line);
 }
 
+// Treat checkbox fields (and any other unique field group types) slightly different
 .field--check {
-	label {
-		@extend .group;
-	}
+    label {
+        @extend %group;
+    }
 }
 
 legend {
-	@extend .group;
+    @extend %group;
 }
 
 label,
@@ -31,90 +43,57 @@ label,
 
 }
 
-.req {
-
-}
-
+// Add some error styling. Keeping the labels absolutely positioned prevents them from altering the layout when visible.
 .label--error {
-	position:absolute;
-	left:0;
-	bottom:0;
+    position:absolute;
+    left:0;
+    bottom:0;
 }
 .error {
-	color:$red;
+    color:$red;
 }
 
-//   Spoken forms are for forms that read like spoken word, e.g.:
-//
-//   <li class=spoken-form>
-//       Hello, my <label for=spoken-name>name</label> is
-//       <input type=text class=text-input id=spoken-name>. My home
-//       <label for=country>country</label> is
-//       <select id=country>
-//           <option>UK</option>
-//           <option>US</option>
-//           <option>Other</option>
-//       </select>
-//   </li>
 
-.spoken-form label{
-	display:inline-block;
-	font:inherit;
-}
 
-//    Text inputs
+//    Text inputs. Another hat tip to Inuit for the text-input class idea. http://inuitcss.com/
 //
 //    Instead of a `[type]` selector for each kind of form input, we just use a
 //    class to target any/every one, e.g.:
-//   <input type=text class=text-input>
-//   <input type=email class=text-input>
-//   <input type=password class=text-input>
+//   <input type="text" class="text-input" />
+//   <input type="email" class="text-input" />
+//   <input type="password" class="text-input" />
 
 .text-input {
-	-webkit-appearance: none;
-	@include transition(color,background-color 0.1s linear, max-width 1s ease);
-	@include box;
-	width:100%;
-	outline:none;
+    -webkit-appearance: none;
+    @include box;
+    @include placeholder-color($dark-grey);
+    width:100%;
+    outline:none;
 
-	&:active,
-	&:focus {
+    &:active,
+    &:focus {
 
-	}
+    }
 
-	&.error {
+    &.error {
 
-	}
-
-	+ .text-input {
-
-	}
+    }
 }
 
-textarea{
-	@extend .text-input;
-	min-height: $line*6;
-}
-
-.search-form {
-	position: relative;
-
-		button {
-			position:absolute;
-			right:0;
-			top:0;
-		}
+textarea {
+    @extend .text-input;
+    min-height: $line*6;
 }
 
 .search-input,
 input[type=search] {
-	@extend .text-input;
-	overflow:hidden;
+    @extend .text-input;
+    overflow:hidden;
 
-	&:focus,
-	&:active {
+    &:focus,
+    &:active {
 
-	}
+    }
 }
 
 select {
@@ -122,31 +101,15 @@ select {
 }
 
 input[type=file] {
-	@extend .text-input;
+    @extend .text-input;
 }
 
-//   Groups of checkboxes and radios, e.g.:
-//   <li>
-//       <ul class=check-list>
-//           <li>
-//               <input /> <label />
-//           </li>
-//           <li>
-//               <input /> <label />
-//           </li>
-//       </ul>
-//   </li>
-
-.check-list{
-	list-style:none;
-	margin:0;
-}
 
 // Labels in check-lists
 .check-label,
-.check-list label,
-.check-list .label{
-	display:inline-block;
+.field--check label,
+.field--check .label{
+    display:inline-block;
 }
 
 
@@ -163,58 +126,60 @@ input[type=file] {
 
 // small
 .extra-help{
-	display:inline-block;
-	visibility:hidden;
+    display:inline-block;
+    visibility:hidden;
 }
 .text-input:active + .extra-help,
 .text-input:focus + .extra-help{
-	visibility:visible;
+    visibility:visible;
 }
 
-// Mini forms
-
+// Modified forms
 .form--mini {
-	.field {
+    .field {
 
-	}
-	.check-label,
-	.check-list label,
-	.check-list .label{
+    }
+    .text-input {
 
-	}
-}
-.form--mini .text-input,
-.text-input--mini {
-
-}
-.callout--well {
-	.text-input {
-
-	}
+    }
 }
 
+// Inline forms are good for embedding fields in text. Another hat tip to Inuit. http://inuitcss.com/
+//
+// <div class="form--inline">
+//  <p>Yo Jeeves, the <label for="name">name</label> is
+//      <input type="text" class="text-input" id="name" />. My
+//      <label for="drink">drink of choice</label> is
+//      <select id="drink">
+//              <option>Bourbon</option>
+//          <option>Vodka</option>
+//          <option>Gin</option>
+//      </select>.</p>
+// </div>
 
+.form--inline {
+    label {
+        display:inline-block;
+        font:inherit;
+    }
+}
+
+// Not all fields need to be full width. Here are some field building blocks
+// I'm kicking these in at a wider screen, but make some for mobile. If you dare. ;)
 @media only screen and (min-width: $screenSmall) {
-	fieldset h2,
-	.field {
-		@include box;
-		clear:both;
-	}
-	.field--half {
-		width:$c4*2;
-		float:left;
-
-		+ .field--half {
-			clear:none;
-
-			+ .field--half {
-				clear:left;
-				padding-left: 0;
-
-				+ .field--half {
-					clear:none;
-				}
-			}
-		}
-	}
+    .field--half,
+    .field--third,
+    .field--two-third {
+        float:left;
+        padding:0;
+    }
+    .field--half {
+        width:$c4*2;
+    }
+    .field--third {
+        width:$c3;
+    }
+    .field--two-third {
+        width:$c3*2;
+    }
 }

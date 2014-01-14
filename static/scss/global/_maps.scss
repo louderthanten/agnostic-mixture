@@ -1,0 +1,33 @@
+// MAPS
+
+// Let's use the same syntax as imaegs, but add a .map class.
+// Keep your  map content short on mobile so it doesn't hijack the scroll
+
+// Example:
+// <figure class="map">
+//      <iframe Some map's embed code></iframe>
+// </figure>
+
+.map {
+    iframe {
+        max-height:$line*6;
+    }
+}
+
+// Make maps fluid
+#googlemap img,
+object,
+embed,
+#map_canvas embed,
+#map_canvas img,
+#map_canvas object {
+    max-width: none;
+}
+
+@media only screen and (min-width: $screenSmall) {
+    .map {
+        iframe {
+            max-height:auto;
+        }
+    }
+}

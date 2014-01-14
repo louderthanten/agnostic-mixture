@@ -1,12 +1,14 @@
+// BREADCRUMBS
+//
+// Example:;
+//<nav class="breadcrumbs row">
+//  <div class="container">
+//      <p><a href="/">Home</a> / <a href="">Parent page</a> / <span class="active">Current page</span></p>
+//  </div>
+//</nav>
+
 .breadcrumbs {
-	//@extend .small;
-	@include rem(padding-top, $line/2);
-	@include rem(margin-bottom, $line);
-	border-top:$keyline;
-
-
-	@media only screen and (min-width: $screenSmall) {
-		@include box;
-		border:none;
-	}
+    padding-top: rem($line/2);
+    margin-bottom: rem($line);
+    border-top:$keyline;
 }

@@ -27,7 +27,8 @@ $white-rule: 1px solid $white;
 $keyline: 1px solid lighten($dark-grey, 10);
 $hairline: 1px solid lighten($dark-grey, 20);
 
-$default-border-radius: 3px;
+// Default border radius
+$radius: 3px;
 
 ///* =============================================================================
 //   Font Stacks

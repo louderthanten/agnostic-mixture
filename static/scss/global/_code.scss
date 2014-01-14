@@ -1,81 +1,56 @@
-/*------------------------------------*\
-		$CODE
-\*------------------------------------*/
-/**
- * Use an explicit font stack to ensure browsers render correct `line-height`.
- */
+// CODE
+
+// For pretty code blocks. Lot's of great hints taken from the fabulous Inuit Framework. http://inuitcss.com/
+
 pre{
-		overflow:auto;
-}
-		pre mark{
-				background:none;
-				border-bottom:1px solid;
-				color:inherit;
-		}
+    overflow:auto;
 
-
-/**
- * Add comments to your code examples, e.g.:
- *
-	 <code>&lt;/div&gt;<span class=code-comment>&lt;!-- /wrapper --&gt;</span></code>
- *
- */
-.code-comment{
-		/**
-		 * Override this setting in your theme stylesheet
-		 */
-		opacity:0.75;
-		filter:alpha(opacity=75);
+    mark {
+        background:none;
+        border-bottom:1px solid;
+        color:inherit;
+    }
 }
 
 
-
+// Default code blocks. I'm extending the .reverse class  to apply a reversed color style. Do what you want.
 .code-block {
-	@extend .reverse;
-	@extend .callout;
-	@include rem(padding, $line);
-	color:$white;
+    @extend .reverse;
+    padding:rem($line);
+    color:$white;
 }
 
 code {
-	font-family: $mono;
-	color:$white;
-}
-.code__comment {
-	color:lighten($dark-grey, 33);
+    font-family: $mono;
+    color:$white;
 }
 
-/**
- * You can add line numbers to your code examples but be warned, it requires
- * some pretty funky looking markup, e.g.:
- *
-	 <ol class=line-numbers>
-			 <li><code>.nav{</code></li>
-			 <li><code>    list-style:none;</code></li>
-			 <li><code>    margin-left:0;</code></li>
-			 <li><code>}</code></li>
-			 <li><code>    .nav > li,</code></li>
-			 <li><code>        .nav > li > a{</code></li>
-			 <li><code>            display:inline-block;</code></li>
-			 <li><code>           *display:inline-block;</code></li>
-			 <li><code>            zoom:1;</code></li>
-			 <li><code>        }</code></li>
-	 </ol>
- *
- * 1. Make the list look like code.
- * 2. Give the list flush numbers with a leading zero.
- * 3. Make sure lines of code don’t wrap.
- * 4. Give the code form by forcing the `code` to honour white-space.
- */
+// Code comments
+// EG) <code>&lt;/div&gt;<span class="code__comment">&lt;!-- Nice comment, dude. --&gt;</span></code>
+.code__comment{
 
-.line-numbers{
-		font-family: $mono;         /* [1] */
-		list-style:decimal-leading-zero inside; /* [2] */
-		white-space:nowrap;                     /* [3] */
-		overflow:auto;                          /* [3] */
-		margin-left:0;
-		margin-bottom: 0;
 }
+
+//  Numbered code blocks. Ugly code, but works well.
+//
+//   <ol class="line-numbers">
+//           <li><code>.object {</code></li>
+//           <li><code>    color: $white;</code></li>
+//           <li><code>    margin: $line;</code></li>
+//           <li><code>}</code></li>
+//   </ol>
+
+
+.line-numbers {
+        font-family: $mono;
+        list-style:decimal-leading-zero inside;
+        white-space:nowrap;
+        overflow:auto;
+        margin-left:0;
+        margin-bottom: 0;
+}
+
+// Forces whitespace so it acts like real code.
 .line-numbers code{
-		white-space:pre;                    /* [4] */
+        white-space:pre;
 }

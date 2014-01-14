@@ -1,8 +1,6 @@
-// =============================================================================
-// Non-semantic helper classes
-// ==========================================================================
+// HELPERS
 
-/* For image replacement */
+//Hide for both screenreaders and browsers: http://css-discuss.incutio.com/wiki/Screenreader_Visibility
 .ir {
     background-repeat: no-repeat;
     direction: ltr;
@@ -16,15 +14,12 @@
     }
 }
 
-/* Hide for both screenreaders and browsers:
-   css-discuss.incutio.com/wiki/Screenreader_Visibility */
 .hidden {
     display: none;
     visibility: hidden;
 }
 
-/* Hide only visually, but have it available for screenreaders: by Jon Neal.
-  www.webaim.org/techniques/css/invisiblecontent/  &  j.mp/visuallyhidden */
+// Hide only visually, but have it available for screenreaders: by Jon Neal. http://www.webaim.org/techniques/css/invisiblecontent/  &  j.mp/visuallyhidden
 .visuallyhidden {
     border: 0;
     clip: rect(0 0 0 0);
@@ -49,21 +44,24 @@
     }
 }
 
-/* Hide visually and from screenreaders, but maintain layout */
+// Hide visually and from screenreaders, but maintain layout
 .invisible {
     visibility: hidden;
 }
 .right{
-	float:right;
+    float:right;
 }
 .left{
-	float:left;
+    float:left;
 }
-
 .clear { clear:both; }
 
-/* Contain floats: nicolasgallagher.com/micro-clearfix-hack/ */
-.group {
+
+
+// Helpful placeholder selectors give us easy access to some nice helpers without fill our code with classes.
+
+// Contain floats: nicolasgallagher.com/micro-clearfix-hack/
+%group {
     zoom:1;
 
     &:before,
@@ -77,17 +75,14 @@
     }
 }
 
-#googlemap img,
-object,
-embed,
-#map_canvas embed,
-#map_canvas img,
-#map_canvas object {
-    max-width: none;
+// Effortlessly vertically align objects
+%vertical-align {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
-/* Misc ---------------------- */
-
+// Text manipulation
 .text--left   {
     text-align: left;
 }
@@ -97,9 +92,6 @@ embed,
 .text--center {
     text-align: center;
 }
-.hide        {
+.hide  {
     display: none;
-}
-.highlight   {
-    background: yellow;
 }

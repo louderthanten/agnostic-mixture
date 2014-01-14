@@ -1,24 +1,29 @@
+// HEADINGS
+
+// Modular scales are your friend, my friend: http://modularscale.com  |  https://vimeo.com/17079380
+
 h1 {
 
-	> span,
-	> small {
+    // Handy for header sub-elements
+    > span,
+    > small {
 
-	}
+    }
 }
 h2 {
 
-	> span,
-	> small {
+    > span,
+    > small {
 
-	}
+    }
 
 }
 h3 {
 
-	> span,
-	> small {
+    > span,
+    > small {
 
-	}
+    }
 }
 h4 {
 
@@ -33,18 +38,8 @@ h6 {
 hgroup,
 .hgroup {
 
-	> *:first-child {
-		margin-bottom: 0;
-	}
-
-	> *:last-child,
-	h2 + h1,
-	h3 + h2 {
-		margin-top: 0;
-	}
-
-	> *:first-child {
-
-	}
+    > * {
+        margin:0;
+    }
 
 }

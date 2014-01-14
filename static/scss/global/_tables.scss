@@ -1,3 +1,6 @@
+// TABLES
+//
+// Pulled from the ever awesome Inuit.css  http://inuitcss.com/
 //* We have a lot at our disposal for making very complex table constructs, e.g.:
 //
 //  <table class="table--bordered  table--striped  table--data">
@@ -42,33 +45,28 @@
 //              <td class=numerical>09.640</td>
 //              <td>Lorem</td>
 //          </tr>
-//          <tr>
-//              <td>Dolor</td>
-//              <td class=numerical>12.117</td>
-//              <td>Lorem</td>
-//          </tr>
 //      </tbody>
 //  </table>
 
 table{
-	@include box;
-	border-collapse: collapse;
-	width:100%;
+    @include box;
+    border-collapse: collapse;
+    width: 100%;
 
-	ul,
-	ol,
-	dl,
-	p {
-		margin-bottom: 0;
-	}
+    ul,
+    ol,
+    dl,
+    p {
+        margin-bottom: 0;
+    }
 
-	img {
-		max-width: 100%;
-	}
+    img {
+        max-width: 100%;
+    }
 }
 th,
-td{
-	text-align:left;
+td {
+    text-align: left;
 }
 
 
@@ -76,24 +74,22 @@ td{
 // Cell alignments
 
 [colspan]{
-	text-align:center;
+    text-align: center;
 }
 [colspan="1"]{
-	text-align:left;
+    text-align: left;
 }
 [rowspan]{
-	vertical-align:middle;
+    vertical-align: middle;
 }
 [rowspan="1"]{
-	vertical-align:top;
+    vertical-align: top;
 }
 .numerical,
 .delete {
-	text-align:right;
+    text-align: right;
 }
-.total {
 
-}
 
 // In the HTML above we see several `col` elements with classes whose numbers
 // represent a percentage width for that column. We leave one column free of a
@@ -131,14 +127,14 @@ td{
 //  Bordered tables
 .table--bordered{
 
-	th,
-	td{
-		border:$rule;
+    th,
+    td{
+        border:$rule;
 
-		&:empty{
-			border:none;
-		}
-	}
+        &:empty{
+            border:none;
+        }
+    }
 }
 
 
@@ -146,7 +142,7 @@ td{
 // Striped tables
 
 .table--striped{
-	tbody tr:nth-of-type(odd){
-		background-color: lighten($dark-grey, 70);
-	}
+    tbody tr:nth-of-type(odd){
+        background-color: lighten($dark-grey, 70);
+    }
 }

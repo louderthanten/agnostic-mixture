@@ -1,6 +1,4 @@
 @charset "UTF-8";
-// Compass Imports
-@import "compass";
 
 // Variables, Mixins, and resets
 @import "settings/variables";
@@ -25,6 +23,7 @@
 @import "global/lists";
 @import "global/keylines";
 @import "global/images";
+@import "global/maps";
 @import "global/videos";
 @import "global/icons";
 @import "global/buttons";
@@ -40,6 +39,7 @@
 @import "modules/breadcrumbs";
 @import "modules/pagination";
 @import "modules/switches";
-@import "modules/check-buttons";
+@import "modules/option-buttons";
+@import "modules/sliders";
 @import "modules/gallery";
 @import "modules/footer";

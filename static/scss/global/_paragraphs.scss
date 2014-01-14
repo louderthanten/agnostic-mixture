@@ -1,10 +1,14 @@
+// PARAGRAPH STYLES
+
+// Modular scales are your friend, my friend: http://modularscale.com  |  https://vimeo.com/17079380
+
 body {
     @include font-size;
 }
 
 p {
-    @include hyphens;
-    @include rem(margin,0 0 $line/2 0);
+    margin:rem(0 0 $line/2 0);
+    hyphens: auto;
 }
 
 .lead {
@@ -13,10 +17,12 @@ p {
 .tagline {
 
 }
+
 b,
 strong {
-    font-weight: $semibold;
+    font-weight: $bold;
 }
+
 i,
 em {
     font-style: italic;
@@ -29,9 +35,15 @@ abbr {
 
     }
 }
+
+// Fancy ampersands
+//
+// EG) <p>You <abbr class="amp">&amp;</abbr> I.</p>
+
 .amp {
     font-style: italic;
 }
+
 
 sup {
     height: 0;
@@ -41,6 +53,10 @@ sup {
     bottom: .5ex;
 }
 
+.highlight  {
+    background: yellow;
+}
 
+// Don't forget selected text styles
 ::-moz-selection { background: blue; color: white; text-shadow: none; }
 ::selection { background: blue; color: white; text-shadow: none; }

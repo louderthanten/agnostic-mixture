@@ -1,73 +1,31 @@
-.product-gallery {
-	position: relative;
-	margin-bottom: rem($line);
-	overflow: hidden;
-}
+// GALLERY
+
+// I'm using Swipe for my galleries. It's lightweight, touch-friendly, and responsive. http://bradbirdsall.com/swipe-js-a-lightweight-mobile-web-slider
+//
+// To use, add the following line to your javascript:
+//
+// window.mySwipe = Swipe(document.getElementById('gallery'))
+//
+// And mark it up like this example:
+//<div id='gallery' class='gallery'>
+//  <div class='gallery-wrap'>
+//    <div></div>
+//    <div></div>
+//    <div></div>
+//  </div>
+//</div>
+
 .gallery {
   overflow: hidden;
   visibility: hidden;
   position: relative;
 }
-.gallery__wrap {
+.gallery-wrap {
   overflow: hidden;
   position: relative;
-  z-index: 1;
-  background:$white;
-  margin-bottom: 2px;
-
-  > img {
-  	float:left;
-  	width:100%;
-  	position: relative;
-	}
 }
-.nav--gallery {
-	@include box;
-	position: relative;
-	width:100%;
-	height:$line*3;
-	z-index: 15;
-
-	div {
-		@include transition(all 0.2s linear);
-		position: absolute;
-		top:0;
-		width:49.5%;
-		padding-top: rem($line/1.75);
-		padding-bottom: rem($line/2);
-		z-index: 6;
-		background: rgba(255,255,255,0.9);
-		opacity: .6;
-		cursor: pointer;
-
-		&:hover {
-			opacity: 1;
-		}
-
-		.livicon {
-			vertical-align: middle;
-			display: inline-block;
-			line-height: 1;
-		}
-	}
-}
-.gallery__previous {
-	left:0;
-	text-align: left;
-
-	.livicon {
-		margin-left: rem($line);
-	}
-}
-.gallery__next {
-	right:0;
-	text-align: right;
-
-	.livicon {
-		margin-right: rem($line);
-	}
-}
-
-@media only screen and (min-width: $screenSmall) {
-
+.gallery-wrap > div {
+  float:left;
+  width:100%;
+  position: relative;
 }
