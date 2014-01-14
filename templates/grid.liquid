@@ -1,50 +1,50 @@
 {% block content %}
 <section>
-	<div class="container">
-		<h1>Grid</h1>
-		<hr>
-		<p class="lead">We&rsquo;re using a complex folding compound grid for maximum flexibility in our responsive layouts. This is a fluid grid with flexible columns and fixed-width gutters to maintain proportional spacing and alignment for all screen dimensions.</p>
+    <div class="container">
+        <h1>Grid</h1>
+        <hr>
+        <p class="lead">We&rsquo;re using a complex folding compound grid for maximum flexibility in our responsive layouts. This is a fluid grid with flexible columns and fixed-width gutters to maintain proportional spacing and alignment for all screen dimensions.</p>
 
-		<p>Our grid system is not attached to classes like other pre-packaged CSS grid systems. Instead, they are set in SCSS using our simple grid varables. This keeps our markup clean and our layout much easier to modify at various breakpoints.</p>
-		<p><em>E.G. To specify a width of four columns of a six column grid ($c6 == 1 column of a 6-column grid), use the following:</em></p>
+        <p>Our grid system is not attached to classes like other pre-packaged CSS grid systems. Instead, they are set in SCSS using our simple grid varables. This keeps our markup clean and our layout much easier to modify at various breakpoints.</p>
+        <p><em>E.G. To specify a width of four columns of a six column grid ($c6 == 1 column of a 6-column grid), use the following:</em></p>
 
-		<div class="code-block">
-			<ol class="line-numbers">
-				<li><code>.object{</code></li>
-				<li><code>	<span class="code__comment">/* Use any of the following mixins to set box-sizing & gutters. */</span></code></li>
-				<li><code>	<span class="code__comment">// @include box; /* Sets box-sizing to border-box. */</span></code></li>
-				<li><code>	<span class="code__comment">// @include gutters; /* Applies gutter spacing to sides of object. */</span></code></li>
-				<li><code>	@include wrap; <span class="code__comment">/* OR wrap sets both box & gutters in one mixin. */</span></code></li>
-				<li><code>    width:$c6*4; <span class="code__comment">/* $c6 = 1 column of a 6-column grid. Mulitply by 4 to specify 4 columns wide. */</span></code></li>
-				<li><code>    margin-left:$c6*1; <span class="code__comment">/* Moves object 1 column to the right. */</span></code></li>
-				<li><code>}</code></li>
-			</ol>
-	  </div>
+        <div class="code-block">
+            <ol class="line-numbers">
+                <li><code>.object{</code></li>
+                <li><code>  <span class="code__comment">/* Use any of the following mixins to set box-sizing & gutters. */</span></code></li>
+                <li><code>  <span class="code__comment">// @include box; /* Sets box-sizing to border-box. */</span></code></li>
+                <li><code>  <span class="code__comment">// @include gutters; /* Applies gutter spacing to sides of object. */</span></code></li>
+                <li><code>  @include wrap; <span class="code__comment">/* OR wrap sets both box & gutters in one mixin. */</span></code></li>
+                <li><code>    width:$c6*4; <span class="code__comment">/* $c6 = 1 column of a 6-column grid. Mulitply by 4 to specify 4 columns wide. */</span></code></li>
+                <li><code>    margin-left:$c6*1; <span class="code__comment">/* Moves object 1 column to the right. */</span></code></li>
+                <li><code>}</code></li>
+            </ol>
+      </div>
 
-	</div>
+    </div>
 </section>
 <section class="grids">
-	<div class="container">
-	  <h2>Tertiary Three/Six responsive folding grid</h2>
-	  <div class="folding six three"><span></span></div>
-	  <div class="folding six"><span></span></div>
-	  <div class="folding six three"><span></span></div>
-	  <div class="folding six"><span></span></div>
-	  <div class="folding six three"><span></span></div>
-	  <div class="folding six"><span></span></div>
+    <div class="container">
+      <h2>Tertiary Three/Six responsive folding grid</h2>
+      <div class="folding six three"><span></span></div>
+      <div class="folding six"><span></span></div>
+      <div class="folding six three"><span></span></div>
+      <div class="folding six"><span></span></div>
+      <div class="folding six three"><span></span></div>
+      <div class="folding six"><span></span></div>
 
-	  <h2>Primary Two/Four/Eight responsive folding grid</h2>
-	  <div class="folding eight four two"><span></span></div>
-	  <div class="folding eight"><span></span></div>
-	  <div class="folding eight four"><span></span></div>
-	  <div class="folding eight"><span></span></div>
-	  <div class="folding eight four"><span></span></div>
-	  <div class="folding eight"><span></span></div>
-	  <div class="folding eight four two"><span></span></div>
-	  <div class="folding eight"><span></span></div>
+      <h2>Primary Two/Four/Eight responsive folding grid</h2>
+      <div class="folding eight four two"><span></span></div>
+      <div class="folding eight"><span></span></div>
+      <div class="folding eight four"><span></span></div>
+      <div class="folding eight"><span></span></div>
+      <div class="folding eight four"><span></span></div>
+      <div class="folding eight"><span></span></div>
+      <div class="folding eight four two"><span></span></div>
+      <div class="folding eight"><span></span></div>
 
-	  <h2>Secondary Three/Five/Seven responsive folding grid</h2>
-		<div class="folding seven five three"><span></span></div>
+      <h2>Secondary Three/Five/Seven responsive folding grid</h2>
+        <div class="folding seven five three"><span></span></div>
     <div class="folding seven five"><span></span></div>
     <div class="folding seven"><span></span></div>
     <div class="folding seven five three"><span></span></div>
@@ -54,34 +54,34 @@
 
     <h2>Combined Grids</h2>
     <div class="combined-grid">
-	  	<div class="grid-1 grid">
-	      <div class="folding eight four two"><span></span></div>
-	      <div class="folding eight"><span></span></div>
-	      <div class="folding eight four"><span></span></div>
-	      <div class="folding eight"><span></span></div>
-	      <div class="folding eight four"><span></span></div>
-	      <div class="folding eight"><span></span></div>
-	      <div class="folding eight four two"><span></span></div>
-	      <div class="folding eight"><span></span></div>
-	  	</div>
-	  	<div class="grid-2 grid">
-	  		<div class="folding seven five three"><span></span></div>
-				<div class="folding seven five"><span></span></div>
-				<div class="folding seven"><span></span></div>
-				<div class="folding seven five three"><span></span></div>
-				<div class="folding seven"><span></span></div>
-				<div class="folding seven five"><span></span></div>
-				<div class="folding seven five three"><span></span></div>
-	  	</div>
-	  	<div class="grid-3 grid">
-	      <div class="folding six three"><span></span></div>
-	      <div class="folding six"><span></span></div>
-	      <div class="folding six three"><span></span></div>
-	      <div class="folding six"><span></span></div>
-	      <div class="folding six three"><span></span></div>
-	      <div class="folding six"><span></span></div>
-	  	</div>
-	  </div>
-	</div>
+        <div class="grid-1 grid">
+          <div class="folding eight four two"><span></span></div>
+          <div class="folding eight"><span></span></div>
+          <div class="folding eight four"><span></span></div>
+          <div class="folding eight"><span></span></div>
+          <div class="folding eight four"><span></span></div>
+          <div class="folding eight"><span></span></div>
+          <div class="folding eight four two"><span></span></div>
+          <div class="folding eight"><span></span></div>
+        </div>
+        <div class="grid-2 grid">
+            <div class="folding seven five three"><span></span></div>
+                <div class="folding seven five"><span></span></div>
+                <div class="folding seven"><span></span></div>
+                <div class="folding seven five three"><span></span></div>
+                <div class="folding seven"><span></span></div>
+                <div class="folding seven five"><span></span></div>
+                <div class="folding seven five three"><span></span></div>
+        </div>
+        <div class="grid-3 grid">
+          <div class="folding six three"><span></span></div>
+          <div class="folding six"><span></span></div>
+          <div class="folding six three"><span></span></div>
+          <div class="folding six"><span></span></div>
+          <div class="folding six three"><span></span></div>
+          <div class="folding six"><span></span></div>
+        </div>
+      </div>
+    </div>
 </section>
 {% endblock %}
