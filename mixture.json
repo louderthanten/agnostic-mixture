@@ -16,6 +16,11 @@
   "projectDescription": "A Mixture for building Agnostic.io UI kits",
   "projectName": "Agnostic",
   "publishedId": null,
+  "sass": {
+    "sourceMap": true,
+    "lineNumbers": true,
+    "useLibSass": true
+  },
   "serverHostname": null,
   "serverPort": null,
   "simpleModePartnerServer": null,

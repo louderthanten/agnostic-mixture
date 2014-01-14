@@ -38,10 +38,6 @@ $serif: serif;
 $sans: sans-serif;
 $mono: monospace;
 
-//Set Quotes
-$open-quote:    “;
-$close-quote:   ”;
-
 // FONT WEIGHTS
 
 $thin: 100;
@@ -68,17 +64,14 @@ $base: 16; // Set the base font size (in px)
 $margin: 100% / 20;
 
 
-///* =============================================================================
-//   Grid
-//   ========================================================================== */
-
+//   GRID
+//
 // USAGE
 // width: $c6*3; // This is 3 units of a 6 unit grid wide
 // margin-left: $c4*2; // This pushes the element 2 units (of a 4 element grid) to the left
-
-// You should add @include wrap; to each column adjustment
-// It's recomended to change box sizing to border-box for easier styling and positining.
-// Read more here: http://goldengridsystem.com
+//
+// Make box-sizing: border-box; for easier styling and positining using the wrap mixin.
+// Read more on the basic concept here: http://goldengridsystem.com
 
 // Have fun. Make as many as you like. Simple.
 
@@ -102,6 +95,8 @@ $c9: 100% / 9;
 $c10: 100% / 10;
 //Twelve Column Grid
 $c12: 100% / 12;
+//Sixteen Column Grid
+$c16: 100% / 16;
 
 
 

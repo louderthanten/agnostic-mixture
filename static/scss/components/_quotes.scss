@@ -3,7 +3,7 @@
 //Inline Quotes
 
 q{
-    quotes:"‘" "’" "#{$open-quote}" "#{$close-quote}";
+    quotes:"‘" "’" "“" "”";
 
     &:before{
         content:"‘";
@@ -27,7 +27,7 @@ q{
 //Blockquotes
 blockquote {
     @include box;
-    quotes:"#{$open-quote}" "#{$close-quote}";
+    quotes:"“" "”";
     text-indent: -0.5em;
 
     p {
@@ -35,7 +35,7 @@ blockquote {
     }
 
     p:before{
-        content:"#{$open-quote}";
+        content:"“";
         content:open-quote;
     }
     p:after{
@@ -43,7 +43,7 @@ blockquote {
         content:no-close-quote;
     }
     p:last-of-type:after{
-        content:"#{$close-quote}";
+        content:"”";
         content:close-quote;
     }
 
