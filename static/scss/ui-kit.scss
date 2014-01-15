@@ -70,10 +70,6 @@ nav {
 
 // Type Section
 .type-sample {
-    padding-top:rem($line);
-    padding-bottom:rem($line);
-    margin-bottom: rem($line);
-    border-top: $keyline;
 
     p {
         @include font-size(24, 36);
@@ -218,6 +214,7 @@ nav {
 }
 
 @media only screen and (min-width: $screenSmall) {
+
     .paragraphs {
         width:$c4*3;
     }

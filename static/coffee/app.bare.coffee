@@ -32,10 +32,10 @@ $ ->
 
     #Pill checkbox & radio buttons a little help
     $('.js-options input').change ->
-        type = $(@).parents('.js-pill')
+        type = $(@).attr('type')
         check = $(@).parent('label')
-        if $(type).hasClass('check-buttons')
+        if type is 'checkbox'
             check.toggleClass('checked')
-        else if $(type).hasClass('radio-buttons')
+        else if type is 'radio'
             check.siblings('label').removeClass('checked')
             check.addClass('checked')

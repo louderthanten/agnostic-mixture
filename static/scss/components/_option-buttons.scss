@@ -17,7 +17,8 @@
 //    <label for="rb3"><input type="radio" name="radio-button" value="3" id="rb3" />Item 3</label>
 //</div>
 
-.option-buttons {
+.option-buttons,
+.pill-buttons {
     label {
         transition: all 0.1s linear;
         position:relative;
@@ -49,5 +50,13 @@
     }
     .checked {
         background:$red;
+    }
+}
+
+.pill-buttons  {
+    @extend .button-group;
+
+    label {
+        @extend .button;
     }
 }

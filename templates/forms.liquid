@@ -1,13 +1,14 @@
 {% block content %}
-<section class="forms">
+<header class="row">
     <div class="container">
-
         <h1>Forms</h1>
-
-        <hr />
-
-        <form action="" method="post">
-            <fieldset>
+        <p class="lead">Forms are essential for user interaction, but often get forgotten about in the design phase. Make 'em consistent here, first.</p>
+    </div>
+</header>
+<form action="" method="post">
+    <section class="row">
+        <div class="container">
+            <fieldset class="split-content">
                 <legend><h2>Text Inputs</h2></legend>
 
                 <div class="field">
@@ -30,6 +31,19 @@
                     <label for="search">Search input</label>
                     <input type="search" name="search" value="" placeholder="Search" class="search-input"  />
                 </div>
+                <div class="field">
+                    <label for="textarea">Textarea</label>
+                    <textarea name="textarea"></textarea>
+                </div>
+
+                <div class="field">
+                    <label for="error">Invalid input</label>
+                    <input type="text" name="error" value="Bad input" placeholder="" class="error text-input"  />
+                    <label class="error label--error">Error message for invalid field.</label>
+                </div>
+            </fieldset>
+            <fieldset class="split-content">
+                <legend><h2>HTML5 Special fields</h2></legend>
                 <div class="field">
                     <label for="number">Number input</label>
                     <input type="number" name="number" value="" placeholder=""  />
@@ -63,19 +77,14 @@
                     <input type="color" name="color" value="" placeholder="" />
                 </div>
 
-                <div class="field">
-                    <label for="textarea">Textarea</label>
-                    <textarea name="textarea"></textarea>
-                </div>
 
-                <div class="field">
-                    <label for="error">Invalid input</label>
-                    <input type="text" name="error" value="Bad input" placeholder="" class="error text-input"  />
-                    <label class="error label--error">Error message for invalid field.</label>
-                </div>
 
             </fieldset>
-            <fieldset>
+        </div>
+    </section>
+    <section class="row">
+        <div class="container">
+            <fieldset class="split-content">
                 <legend><h2>Checks &amp; Radios</h2></legend>
                 <div class="field">
                     <legend>Checkboxes</legend>
@@ -102,7 +111,7 @@
                     </ul>
                 </div>
             </fieldset>
-            <fieldset>
+            <fieldset class="split-content">
                 <legend><h2>Selects</h2></legend>
                 <div class="field">
                     <label for="select">Select Dropdown</label>
@@ -125,20 +134,22 @@
                     </select>
                 </div>
             </fieldset>
-            <fieldset>
+            <fieldset class="split-content">
                 <legend><h2>File uploads</h2></legend>
                 <div class="field">
                     <label for="file">File upload</label>
                     <input type="file" name="file" value="" />
                 </div>
             </fieldset>
-            <fieldset>
+        </div>
+    </section>
+    <section class="row">
+        <div class="container">
+            <fieldset class="split-content">
                 <legend><h2>Special fields</h2></legend>
 
-                <hr />
-
-                <div class="field check-buttons js-pill">
-                    <legend><h3>Checkbox pill buttons</h3></legend>
+                <div class="field option-buttons js-options">
+                    <legend><h3>Checkbox option buttons</h3></legend>
                     <label for="cb1"><input type="checkbox" name="check-button" value="1" id="cb1" />Item 1</label>
                     <label for="cb2"><input type="checkbox" name="check-button" value="2" id="cb2" />Item 2</label>
                     <label for="cb3"><input type="checkbox" name="check-button" value="3" id="cb3" />Item 3</label>
@@ -147,27 +158,26 @@
                 <h4>Markup example:</h4>
                 <div class="code-block">
                     <ol class="line-numbers">
-                        <li><code>&lt;div class="field check-buttons js-pill"&gt;</code></li>
+                        <li><code>&lt;div class="field option-buttons js-options"&gt;</code></li>
                         <li><code>  &lt;label for="cb1"&gt;&lt;input type="checkbox" name="check-button" value="1" id="cb1" /&gt;Item 1&lt;/label&gt;</code></li>
                         <li><code>  &lt;label for="cb2"&gt;&lt;input type="checkbox" name="check-button" value="2" id="cb2" /&gt;Item 2&lt;/label&gt;</code></li>
                         <li><code>  &lt;label for="cb3"&gt;&lt;input type="checkbox" name="check-button" value="3" id="cb3" /&gt;Item 3&lt;/label&gt;</code></li>
                         <li><code>&lt;/div&gt;</code></li>
                     </ol>
-              </div>
+                </div>
 
-                <hr />
-
-                <div class="field radio-buttons js-pill">
-                    <legend><h3>Radio pill buttons</h3></legend>
+                <div class="field option-buttons js-options">
+                    <legend><h3>Radio option buttons</h3></legend>
                     <label for="rb1"><input type="radio" name="radio-button" value="1" id="rb1" />Item 1</label>
                     <label for="rb2"><input type="radio" name="radio-button" value="2" id="rb2" />Item 2</label>
                     <label for="rb3"><input type="radio" name="radio-button" value="3" id="rb3" />Item 3</label>
                 </div>
 
+
                 <h4>Markup example:</h4>
                 <div class="code-block">
                     <ol class="line-numbers">
-                        <li><code>&lt;div class="field radio-buttons js-pill"&gt;</code></li>
+                        <li><code>&lt;div class="field option-buttons js-options"&gt;</code></li>
                         <li><code>  &lt;label for="rb1"&gt;&lt;input type="radio" name="radio-button" value="1" id="rb1" /&gt;Item 1&lt;/label&gt;</code></li>
                         <li><code>  &lt;label for="rb2"&gt;&lt;input type="radio" name="radio-button" value="2" id="rb2" /&gt;Item 2&lt;/label&gt;</code></li>
                         <li><code>  &lt;label for="rb3"&gt;&lt;input type="radio" name="radio-button" value="3" id="rb3" /&gt;Item 3&lt;/label&gt;</code></li>
@@ -175,7 +185,42 @@
                     </ol>
               </div>
 
-                <hr />
+                <div class="field pill-buttons js-options">
+                    <legend><h3>Checkbox pill buttons</h3></legend>
+                    <label for="cp1"><input type="checkbox" name="check-pill" value="1" id="cp1" />Item 1</label>
+                    <label for="cp2"><input type="checkbox" name="check-pill" value="2" id="cp2" />Item 2</label>
+                    <label for="cp3"><input type="checkbox" name="check-pill" value="3" id="cp3" />Item 3</label>
+                </div>
+
+                <h4>Markup example:</h4>
+                <div class="code-block">
+                    <ol class="line-numbers">
+                        <li><code>&lt;div class="field pill-buttons js-options"&gt;</code></li>
+                        <li><code>  &lt;label for="cp1"&gt;&lt;input type="checkbox" name="check-button" value="1" id="cp1" /&gt;Item 1&lt;/label&gt;</code></li>
+                        <li><code>  &lt;label for="cp2"&gt;&lt;input type="checkbox" name="check-button" value="2" id="cp2" /&gt;Item 2&lt;/label&gt;</code></li>
+                        <li><code>  &lt;label for="cp3"&gt;&lt;input type="checkbox" name="check-button" value="3" id="cp3" /&gt;Item 3&lt;/label&gt;</code></li>
+                        <li><code>&lt;/div&gt;</code></li>
+                    </ol>
+              </div>
+
+
+                <div class="field pill-buttons js-options">
+                    <legend><h3>Radio pill buttons</h3></legend>
+                    <label for="rp1"><input type="radio" name="radio-pill" value="1" id="rp1" />Item 1</label>
+                    <label for="rp2"><input type="radio" name="radio-pill" value="2" id="rp2" />Item 2</label>
+                    <label for="rp3"><input type="radio" name="radio-pill" value="3" id="rp3" />Item 3</label>
+                </div>
+
+                <h4>Markup example:</h4>
+                <div class="code-block">
+                    <ol class="line-numbers">
+                        <li><code>&lt;div class="field pill-buttons js-options"&gt;</code></li>
+                        <li><code>  &lt;label for="rp1"&gt;&lt;input type="radio" name="radio-button" value="1" id="rp1" /&gt;Item 1&lt;/label&gt;</code></li>
+                        <li><code>  &lt;label for="rp2"&gt;&lt;input type="radio" name="radio-button" value="2" id="rp2" /&gt;Item 2&lt;/label&gt;</code></li>
+                        <li><code>  &lt;label for="rp3"&gt;&lt;input type="radio" name="radio-button" value="3" id="rp3" /&gt;Item 3&lt;/label&gt;</code></li>
+                        <li><code>&lt;/div&gt;</code></li>
+                    </ol>
+              </div>
 
 
                 <label for=""><h3>Switch</h3></label>
@@ -198,8 +243,6 @@
                     </ol>
               </div>
 
-              <hr />
-
                 <div class="field range-slider">
                     <label for="range">Slider<small>*(Requires jQuery UI)</small></label>
                     <div id="slider" class="js-slider"></div>
@@ -212,10 +255,10 @@
                         <li><code>  &lt;div id="slider-range"&gt;&lt;/div&gt;</code></li>
                         <li><code>&lt;/div&gt;</code></li>
                     </ol>
-              </div>
+                </div>
 
             </fieldset>
-            <fieldset>
+            <fieldset class="split-content">
                 <legend><h2>Buttons</h2></legend>
                 <div class="field">
                     <button type="submit">Button input</button>
@@ -227,16 +270,10 @@
                     <a href="" class="button">Button link</a>
                 </div>
                 <div class="field">
-                    <a href="" class="button button--dark">Dark button</a>
-                </div>
-                <div class="field">
-                    <a href="" class="button button--light-blue">Light blue button</a>
+                    <a href="" class="button button--red">Red button</a>
                 </div>
                 <div class="field">
                     <a href="" class="button button--disabled">Disabled button</a>
-                </div>
-                <div class="field">
-                    <a href="" class="button button--icon"><span class="ss-atom"></span> Icon button</a>
                 </div>
                 <div class="field">
                     <a href="" class="button button--small">Small button link</a>
@@ -250,7 +287,7 @@
                     <a href="" class="button">Button group</a>
                 </div>
             </fieldset>
-        </form>
-    </div>
-</section>
+        </div>
+    </section>
+</form>
 {% endblock %}

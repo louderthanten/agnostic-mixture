@@ -1,43 +1,39 @@
 {% block content %}
-
-<section class="components">
+<header class="row">
     <div class="container">
         <h1>Components</h1>
-        <p>Components combine bits and peices into small reusable pieces that act as the building blocks to our modules and layouts.</p>
+        <p class="lead">Components combine bits and peices into small reusable pieces that act as the building blocks to our modules and layouts.</p>
+    </div>
+</header>
+
+<section class="row">
+    <div class="container">
+        <h2>Navigation</h2>
+
+        <div class="split-content">
+            <h3>Breadcrumbs</h3>
+            {% include "modules/breadcrumbs" %}
+
+            <h3>More links</h3>
+            <p class="more"><a href="">Read more &gt;</a></p>
+        </div>
+        <div class="split-content">
+            <h3>Pagination</h3>
+
+            <h4>Standard</h4>
+            {% include "modules/pagination" %}
+
+            <h4>Mini</h4>
+            {% include "modules/pagination--mini" %}
+        </div>
+
     </div>
 </section>
-
-<section class="navigation">
+<section class="row callouts">
     <div class="container">
-        <h1>Navigation</h1>
-        <hr>
-        <h2>Breadcrumbs</h2>
+        <h2>Callouts</h2>
     </div>
-    {% include "modules/breadcrumbs" %}
-
     <div class="container">
-
-        <h2>Pagination</h2>
-        <hr>
-        <h3>Standard</h3>
-        {% include "modules/pagination" %}
-
-        <h3>Mini</h3>
-        {% include "modules/pagination--mini" %}
-
-        <h2>More links</h2>
-        <hr>
-        <p class="more"><a href="">Read more &gt;</a></p>
-    </div>
-
-
-</section>
-<section class="callouts">
-
-    <div class="container">
-        <h1>Callouts</h1>
-        <hr />
-
         <aside class="callout">
             <div class="content reverse">
                 <h2>Content Callout</h2>
@@ -81,15 +77,14 @@
                 </form>
             </div>
         </aside>
-
     </div>
 </section>
 
-<section class="hidden-content">
+<section class="row">
     <div class="container">
-        <h1>Hidden Content</h1>
-        <hr />
-        <h2>Page-wide drawer</h2>
+        <h2>Hidden Content</h2>
+
+        <h3>Page-wide drawer</h3>
         <p><a href="#drawer" class="button js-reveal">Open drawer</a></p>
     </div>
 </section>
@@ -97,29 +92,8 @@
     <div class="container">
         <div class="content">
             <h2>Hidden drawer</h2>
-            <p>A page wide drawer for hidden content, like the sign-in form below:</p>
+            <p>A page wide drawer for hidden content. You can put anything you want to hide in here.<p>
         </div>
-        <form action="" class="sign-in-form form--mini" id="sign-in-form">
-            <fieldset>
-                <h2>Sign in</h2>
-                <div class="field">
-                    <label for="username">Username</label>
-                    <input type="text" name="username" class="text-input" id="username" required>
-                </div>
-                <div class="field">
-                    <label for="password">Password <a href="" class="js-show-pw small right">Show password</a></label>
-                    <input type="password" name="password" class="text-input" id="password" required>
-
-                    <p><a href="">Forgot password</a></p>
-                </div>
-                <div class="field">
-                    <label for="remember" class="check-label"><input type="checkbox" name="remember" value="yes" checked="checked" /> Rembemer me</label>
-                </div>
-                <div class="field">
-                    <button type="submit" class="button--light-blue button--small">Sign in</button>
-                </div>
-            </fieldset>
-        </form>
     </div>
 </section>
 <section class="callouts">
@@ -131,7 +105,7 @@
             <div class="content reverse">
                 <h2>Callout Drawer</h2>
                 <p>Callout content is a related aside that doesn't fit directly inside normal page content.</p>
-                <p><a href="#callout-drawer-1" class="js-reveal button">Open drawer</a></p>
+                <p><a href="#callout-drawer-1" class="js-reveal button button--red">Open drawer</a></p>
 
                 <form action="" id="callout-drawer-1" class="drawer">
                     <div class="field">
@@ -147,21 +121,22 @@
 
     </div>
 </section>
-<section class="media">
+<section class="row">
     <div class="container">
-        <h1>Media</h1>
-        <hr />
-        <h2>Responsive image</h2>
-        <figure>
-            {{ "2500x1666" | placeholder | image_tag }}
-            <figcaption><p>Explanatory caption to compliment image. <small class="source">Photographer: First Last</small></p></figcaption>
-        </figure>
-
-        <h2>Responsive embedded video</h2>
-        <figure class="video">
-            <iframe src="//player.vimeo.com/video/13752801"  frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-        </figure>
-
+        <h2>Media</h2>
+        <div class="split-content">
+            <h3>Responsive image</h3>
+            <figure>
+                {{ "2500x1666" | placeholder | image_tag }}
+                <figcaption><p>Explanatory caption to compliment image. <small class="source">Photographer: First Last</small></p></figcaption>
+            </figure>
+        </div>
+        <div class="split-content">
+            <h3>Responsive embedded video</h3>
+            <figure class="video">
+                <iframe src="//player.vimeo.com/video/13752801"  frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            </figure>
+        </div>
     </div>
 </section>
 {% endblock %}

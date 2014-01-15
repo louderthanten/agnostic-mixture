@@ -24,11 +24,11 @@ $(function() {
   });
   return $('.js-options input').change(function() {
     var check, type;
-    type = $(this).parents('.js-pill');
+    type = $(this).attr('type');
     check = $(this).parent('label');
-    if ($(type).hasClass('check-buttons')) {
+    if (type === 'checkbox') {
       return check.toggleClass('checked');
-    } else if ($(type).hasClass('radio-buttons')) {
+    } else if (type === 'radio') {
       check.siblings('label').removeClass('checked');
       return check.addClass('checked');
     }

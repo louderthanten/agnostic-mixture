@@ -4,6 +4,7 @@
 
 body {
     @include font-size;
+    font-family: $serif;
 }
 
 p {
@@ -12,7 +13,7 @@ p {
 }
 
 .lead {
-
+    @include font-size(18, $line-n); // using the $line-n variable makes it easy to stick to a baseline grid.
 }
 .tagline {
 

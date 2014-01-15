@@ -1,11 +1,14 @@
 {% block content %}
-<section class="tables">
+<header class="row">
     <div class="container">
         <h1>Tables</h1>
-        <hr />
-
+        <p class="lead">Sometimes we need to show tabular data. Here are some different ways to show it and make them responsive.</p>
+    </div>
+</header>
+<section class="row">
+    <div class="container">
         <h2>Invisible</h2>
-      <table id="demo1">
+      <table id="demo1" class="table--responsive">
           <thead>
               <tr>
                   <th>Lorem</th>
@@ -49,7 +52,7 @@
       </table>
 
         <h2>Bordered</h2>
-      <table class="table--bordered" id="demo2">
+      <table class="table--bordered table--responsive" id="demo2">
           <thead>
               <tr>
                   <th>Lorem</th>
@@ -92,7 +95,7 @@
           </tbody>
       </table>
         <h2>Striped</h2>
-      <table class="table--striped" id="demo3">
+      <table class="table--striped table--responsive" id="demo3">
           <thead>
               <tr>
                   <th>Lorem</th>

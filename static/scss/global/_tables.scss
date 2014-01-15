@@ -140,9 +140,37 @@ td {
 
 
 // Striped tables
-
 .table--striped{
     tbody tr:nth-of-type(odd){
         background-color: lighten($dark-grey, 70);
+    }
+}
+
+// Responsive tables. Let's kick these in at smaller screens.
+@media only screen and (max-width: $screenSmall) {
+
+    table,
+    tbody,
+    tfoot,
+    th,
+    td,
+    tr {
+        display: block !important;
+    }
+    thead {
+        display: none;
+    }
+    thead,
+    tfoot,
+    tbody,
+    tr {
+        clear:both;
+    }
+    tr {
+        width:100%;
+    }
+    .numerical,
+    .delete {
+      text-align: left;
     }
 }

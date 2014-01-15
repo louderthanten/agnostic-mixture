@@ -16,9 +16,12 @@ pre{
 // Default code blocks. I'm extending the .reverse class  to apply a reversed color style. Do what you want.
 .code-block {
     @extend .reverse;
+    @include box;
+    overflow:auto;
     padding:rem($line);
     margin-bottom: rem($line);
     color:$white;
+    width:100%;
 }
 
 code {
@@ -43,15 +46,15 @@ code {
 
 
 .line-numbers {
-        font-family: $mono;
-        list-style:decimal-leading-zero inside;
-        white-space:nowrap;
-        overflow:auto;
-        margin-left:0;
-        margin-bottom: 0;
+    font-family: $mono;
+    list-style:decimal-leading-zero inside;
+    white-space:nowrap;
+    overflow:auto;
+    margin-left:0;
+    margin-bottom: 0;
 }
 
 // Forces whitespace so it acts like real code.
 .line-numbers code{
-        white-space:pre;
+    white-space:pre;
 }

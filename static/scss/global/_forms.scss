@@ -111,6 +111,9 @@ input[type=file] {
 .field--check .label{
     display:inline-block;
 }
+.check-list {
+    list-style: none;
+}
 
 
 //  Extra help text displayed after a field when that field is in focus, e.g.:

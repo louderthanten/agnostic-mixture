@@ -95,17 +95,12 @@ nav {
       display: block;
       padding-right: 12px; }
 
-.type-sample {
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
-  margin-bottom: 1.5rem;
-  border-top: 1px solid #4d4d4d; }
-  .type-sample p {
-    font-size: 24px;
-    font-size: 1.5rem;
-    line-height: 1.5;
-    margin-bottom: 2.25rem;
-    letter-spacing: 0.1em; }
+.type-sample p {
+  font-size: 24px;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  margin-bottom: 2.25rem;
+  letter-spacing: 0.1em; }
 
 .scale {
   max-width: 30em; }
