@@ -1218,7 +1218,16 @@ hr {
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
   border: 0;
-  border-top: 1px solid #4d4d4d; }
+  border-top: 1px solid #333333; }
+
+.rule--light {
+  border-top: 1px solid #999999; }
+
+.rule--red {
+  border-top: 1px solid red; }
+
+.rule--white {
+  border-top: 1px solid #FFFFFF; }
 
 button, input[type="submit"], .button, .pill-buttons label, a.button {
   position: relative;
