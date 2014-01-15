@@ -32,8 +32,9 @@
         {% include "header" %}
 
         <!-- Content block, child page inject content -->
+        <main class="main" id="main" role="main">
         {% block content %}{% endblock %}
-
+        </main>
 
         {% include "footer" %}
         <div class="md-overlay"></div>

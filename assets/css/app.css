@@ -1195,6 +1195,10 @@ time + h1, time + h2, time + h3, time + h4 {
   margin-top: 0; }
 
 
+a.disabled {
+  color: #999999 !important;
+  cursor: default; }
+
 
 sup a, sub a {
   text-decoration: none; }
