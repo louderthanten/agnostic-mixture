@@ -7,7 +7,7 @@
 // <div id="slider" class="js-slider"></div>
 
 .ui-slider {
-    @include wrap;
+    @include gutter;
     position: relative;
     height:rem($line/2);
     margin-top: rem($line);

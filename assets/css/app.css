@@ -1040,6 +1040,9 @@ input.ui-button::-moz-focus-inner, button.ui-button::-moz-focus-inner {
 body .ui-tooltip {
   border-width: 2px; }
 
+*, *:before, *:after {
+  box-sizing: border-box; }
+
 .ir {
   background-repeat: no-repeat;
   direction: ltr;
@@ -1296,10 +1299,6 @@ fieldset {
 
 .text-input, textarea, .search-input, input[type=search], input[type=file] {
   -webkit-appearance: none;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  box-sizing: border-box;
   width: 100%;
   outline: none; }
   .text-input::-webkit-input-placeholder, textarea::-webkit-input-placeholder, .search-input::-webkit-input-placeholder, input[type=search]::-webkit-input-placeholder, input[type=file]::-webkit-input-placeholder {
@@ -1353,10 +1352,6 @@ textarea {
     width: 66.66667%; } }
 
 table {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  box-sizing: border-box;
   border-collapse: collapse;
   width: 100%; }
   table ul, table ol, table dl, table p {
@@ -1508,10 +1503,6 @@ q {
     content: close-quote; }
 
 blockquote {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  box-sizing: border-box;
   quotes: "“" "”";
   text-indent: -0.5em; }
   blockquote p:before {
@@ -1540,10 +1531,6 @@ pre {
     color: inherit; }
 
 .code-block {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  box-sizing: border-box;
   overflow: auto;
   padding: 1.5rem;
   margin-bottom: 1.5rem;
@@ -1611,10 +1598,6 @@ figcaption .source {
 
 
 .callout {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  box-sizing: border-box;
   margin-bottom: 1.5rem; }
   .callout figure {
     margin: 0; }
@@ -1766,10 +1749,6 @@ figcaption .source {
   padding-left: 0.75rem;
   padding-right: 12px;
   padding-right: 0.75rem;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  box-sizing: border-box;
   position: relative;
   height: 0.75rem;
   margin-top: 1.5rem;
@@ -1824,11 +1803,6 @@ html {
 .container {
   position: relative;
   margin: 0 5%; }
-  .container > * {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -o-box-sizing: border-box;
-    box-sizing: border-box; }
 
 .container--mobile-full {
   margin: 0; }

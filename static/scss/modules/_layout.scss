@@ -37,7 +37,6 @@ html {
     // Let's just apply border-box sizing and clearfixing to the container's immediate children while we're here.
     > * {
         @extend %group;
-        @include box;
     }
 }
 

@@ -95,7 +95,7 @@ nav {
     background:#fff;
 }
 .swatch {
-    @include wrap;
+    @include gutter;
     position: relative;
     display: inline-block;
     margin:rem($line/2 $line/2 $line*3 $line/2);
@@ -139,7 +139,7 @@ nav {
         margin-bottom: $line;
         height: $line*10;
         float:left;
-        @include wrap;
+        @include gutter;
 
         span {
             display: block;
@@ -219,7 +219,7 @@ nav {
         width:$c4*3;
     }
     .iconset {
-        @include wrap;
+        @include gutter;
         width:$c8*4;
         float:left;
     }
@@ -265,7 +265,7 @@ nav {
     }
     .callouts {
         .callout {
-            @include wrap;
+            @include gutter;
             float:left;
             width:$c4*2;
 

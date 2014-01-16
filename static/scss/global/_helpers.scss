@@ -1,5 +1,10 @@
 // HELPERS
 
+// All the things box-size: border-box.
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
 //Hide for both screenreaders and browsers: http://css-discuss.incutio.com/wiki/Screenreader_Visibility
 .ir {
     background-repeat: no-repeat;

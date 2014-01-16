@@ -1,4 +1,7 @@
 /* [sass, static/scss, ui-kit.scss] */
+*, *:before, *:after {
+  box-sizing: border-box; }
+
 .ir {
   background-repeat: no-repeat;
   direction: ltr;
@@ -118,10 +121,6 @@ nav {
   padding-left: 0.75rem;
   padding-right: 12px;
   padding-right: 0.75rem;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  box-sizing: border-box;
   position: relative;
   display: inline-block;
   margin: 0.75rem 0.75rem 4.5rem 0.75rem;
@@ -147,11 +146,7 @@ nav {
   padding-left: 12px;
   padding-left: 0.75rem;
   padding-right: 12px;
-  padding-right: 0.75rem;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  box-sizing: border-box; }
+  padding-right: 0.75rem; }
   .grids .folding span {
     display: block;
     width: 100%;
@@ -202,10 +197,6 @@ nav {
     padding-left: 0.75rem;
     padding-right: 12px;
     padding-right: 0.75rem;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -o-box-sizing: border-box;
-    box-sizing: border-box;
     width: 50%;
     float: left; }
   .grid {
@@ -235,10 +226,6 @@ nav {
     padding-left: 0.75rem;
     padding-right: 12px;
     padding-right: 0.75rem;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -o-box-sizing: border-box;
-    box-sizing: border-box;
     float: left;
     width: 50%; }
     .callouts .callout:nth-child(odd) {

@@ -65,7 +65,6 @@ label,
 
 .text-input {
     -webkit-appearance: none;
-    @include box;
     @include placeholder-color($dark-grey);
     width:100%;
     outline:none;

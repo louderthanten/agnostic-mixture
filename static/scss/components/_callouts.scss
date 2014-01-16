@@ -13,7 +13,6 @@
 // .callout acts as a fluid container with padding so side by side callouts can still have a gutter separating them
 .callout {
     @extend %group;
-    @include box;
     margin-bottom:rem($line);
 
     figure {

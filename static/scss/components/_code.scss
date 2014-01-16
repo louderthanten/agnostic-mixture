@@ -16,7 +16,6 @@ pre{
 // Default code blocks. I'm extending the .reverse class  to apply a reversed color style. Do what you want.
 .code-block {
     @extend .reverse;
-    @include box;
     overflow:auto;
     padding:rem($line);
     margin-bottom: rem($line);

@@ -97,24 +97,6 @@ $em: $base * 1;
     @include rem(padding-right, $line/2);
 }
 
-// Apply box-sizing to layout elements
-@mixin box {
-    -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-           -o-box-sizing: border-box;
-               box-sizing: border-box;
-}
-
-// Apply both box-sizing & gutters to in one mixin
-@mixin wrap {
-    @include rem(padding-left, $line/2);
-    @include rem(padding-right, $line/2);
-    -webkit-box-sizing: border-box;
-         -moz-box-sizing: border-box;
-         -o-box-sizing: border-box;
-            box-sizing: border-box;
-}
-
 
 // From Inuit CSS http://inuitcss.com
 // Force overly long spans of text to truncate, e.g.:
