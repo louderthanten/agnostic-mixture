@@ -95,18 +95,21 @@ a.button--small,
     button {
         display:block;
         margin:0;
+        border-radius: 0;
     }
 
     .button:first-child,
     a.button:first-child,
     button:first-child {
-
+        border-top-right-radius: $radius;
+        border-top-left-radius: $radius;
     }
 
     .button:last-child,
     a.button:last-child,
     button:last-child {
-
+        border-bottom-right-radius: $radius;
+        border-bottom-left-radius: $radius;
     }
 
     // Reorganize for wider canvases (like a fancy pill-style nav)
@@ -121,13 +124,17 @@ a.button--small,
         .button:first-child,
         a.button:first-child,
         button:first-child {
-
+            border-top-right-radius: 0;
+            border-top-left-radius: $radius;
+            border-bottom-left-radius: $radius;
         }
 
         .button:last-child,
         a.button:last-child,
         button:last-child {
-
+            border-bottom-right-radius: $radius;
+            border-bottom-left-radius: 0;
+            border-top-right-radius: $radius;
         }
     }
 
