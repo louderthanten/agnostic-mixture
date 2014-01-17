@@ -113,7 +113,10 @@ input[type=file] {
 .check-list {
     list-style: none;
 }
-
+input[type=checkbox],
+input[type=radio] {
+    margin-right: 0.5em;
+}
 
 //  Extra help text displayed after a field when that field is in focus, e.g.:
 //
