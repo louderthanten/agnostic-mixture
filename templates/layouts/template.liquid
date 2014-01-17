@@ -21,6 +21,22 @@
         <!-- Style block allowing child pages to inject their own styles -->
         {% block styles %}{% endblock %}
 
+        {% if global.typekitID %}
+        <!-- Typekit embed. Remove Google Fonts embed if using this. -->
+        <script type="text/javascript">
+          (function() {
+            var config = {
+              kitId: '{{ global.typekit }}',
+              scriptTimeout: 3000
+            };
+            var h=document.getElementsByTagName("html")[0];h.className+=" wf-loading";var t=setTimeout(function(){h.className=h.className.replace(/(\s|^)wf-loading(\s|$)/g," ");h.className+=" wf-inactive"},config.scriptTimeout);var tk=document.createElement("script"),d=false;tk.src='//use.typekit.net/'+config.kitId+'.js';tk.type="text/javascript";tk.async="true";tk.onload=tk.onreadystatechange=function(){var a=this.readyState;if(d||a&&a!="complete"&&a!="loaded")return;d=true;clearTimeout(t);try{Typekit.load(config)}catch(b){}};var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(tk,s)
+          })();
+        </script>
+        {% elseif global.googlefontsEmbed %}
+        <!-- Free font fallback using google fonts. Remove this and use the script below if you use Typekit -->
+        {{ global.googlefontsEmbed  }}
+        {% endif %}
+
     </head>
     <body>
     <!--[if lt IE 9]>
@@ -42,10 +58,7 @@
 
         {% block scripts %}{% endblock %}
 
-        <!--[if (lt IE 9)]>
-            {{ "polyfill.min.js" | asset_url | script_tag }}
-        <![endif]-->
-
+        {% if global.googleanalytics %}
         <script>
             (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
             function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
@@ -54,5 +67,6 @@
             r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
             ga('create','{{ global.googleanalytics }}');ga('send','pageview');
         </script>
+        {% endif %}
     </body>
 </html>
