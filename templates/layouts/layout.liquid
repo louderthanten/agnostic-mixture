@@ -23,9 +23,6 @@
         {% block styles %}{% endblock %}
 
         {% if global.typekitID %}
-
-
-        {% if global.typekitID %}
         <!-- Typekit embed. Remove Google Fonts embed if using this. -->
         <script type="text/javascript">
           (function() {
@@ -43,19 +40,21 @@
 
     </head>
     <body>
-        <!--[if lt IE 9]>
-                <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-           <![endif]-->
+        <div class="wrapper">
+            <!--[if lt IE 9]>
+                    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+               <![endif]-->
 
-           <!-- Include -->
-        {% include "header" %}
+            <!-- Include -->
+            {% include "header" %}
 
-        <!-- Content block, child page inject content -->
-        <main class="main" id="main" role="main">
-        {% block content %}{% endblock %}
-        </main>
+            <!-- Content block, child page inject content -->
+            <main class="main" id="main" role="main">
+            {% block content %}{% endblock %}
+            </main>
 
-        {% include "footer" %}
+            {% include "footer" %}
+        </div>
         <div class="md-overlay"></div>
         <!-- Script block allowing child pages to inject their own scripts -->
         <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>

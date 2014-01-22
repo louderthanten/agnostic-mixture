@@ -9,6 +9,15 @@ html {
     min-height: 100%;
     overflow-y:scroll;
 }
+html,
+body {
+    height:100%;
+}
+.wrapper {
+    position: relative;
+    min-height: 100%;
+    padding-bottom: rem($line*4);
+}
 
 // I use .row classes for edge-to-edge page sections width full-bleed images or background colors.
 // A .container gives the content some margins and sets up the edges of the grid.

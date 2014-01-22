@@ -20,8 +20,8 @@ a.button {
     text-align:center;
     text-decoration: none;
     cursor:pointer;
-    background:$dark-grey;
-    color:$white;
+    background:$text;
+    color:$background;
 
     &:link,
     &:visited {
@@ -29,29 +29,29 @@ a.button {
     }
 
     &:hover {
-        background:$red;
-        color:$white;
+        background:$accent;
+        color:$background;
     }
 
     &:active,
     &:focus {
-        background:$red;
-        color:$white;
+        background:$accent;
+        color:$background;
     }
 }
 
 // Add color variations here
 .button--red,
 a.button--red {
-    background:$red;
+    background:$accent;
 
     &:link,
     &:visited {
-        background:$red;
+        background:$accent;
     }
 
     &:hover {
-        background: $grey;
+        background: $mid-text;
     }
 
     &:active,
@@ -69,7 +69,7 @@ a.button--disabled:focus,
 .button--disabled:hover,
 .button--disabled:active,
 .button--disabled:focus {
-    background:$grey;
+    background:$mid-text;
     cursor: default;
 }
 

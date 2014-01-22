@@ -23,9 +23,9 @@
 
 // Colors
 // Add more here and in the Color liquid template if you need.
-.color1 { background: $dark-grey; }
-.color2 { background: $grey; }
-.color3 { background: $red; }
+.color1 { background: $text; }
+.color2 { background: $mid-text; }
+.color3 { background: $accent; }
 
 //
 // End customizations
@@ -145,7 +145,7 @@ nav {
             display: block;
             width:100%;
             height: $line*10;
-            background:$dark-grey;
+            background:$text;
         }
     }
     h2 {

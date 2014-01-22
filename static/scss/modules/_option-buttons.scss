@@ -25,8 +25,8 @@
         float:left;
         padding:rem($line/4);
         margin-right: 1px;
-        background:$dark-grey;
-        color:$white;
+        background:$text;
+        color:$background;
         text-align: center;
     }
     input {
@@ -48,6 +48,6 @@
         margin-right:auto;
     }
     .checked {
-        background:$red;
+        background:$accent;
     }
 }

@@ -50,7 +50,7 @@ label,
     bottom:0;
 }
 .error {
-    color:$red;
+    color:$accent;
 }
 
 
@@ -65,7 +65,7 @@ label,
 
 .text-input {
     -webkit-appearance: none;
-    @include placeholder-color($dark-grey);
+    @include placeholder-color($text);
     width:100%;
     outline:none;
 

@@ -1,5 +1,8 @@
 // FOOTER
-
 .footer {
+    position: absolute;
+    bottom:0;
+    width:100%;
+    min-height: rem($line*4);
     clear:both;
 }

@@ -2,10 +2,10 @@
 //   Default Colours
 //   ========================================================================== */
 
-$white: #FFFFFF;
-$dark-grey: #333333;
-$grey: #999999;
-$red: red;
+$background: #FFFFFF;
+$text: #333333;
+$mid-text: #999999;
+$accent: red;
 
 
 //Brand Colours
@@ -49,10 +49,10 @@ $youtube: #CC181E;
 //   Borders
 //   ========================================================================== */
 
-$rule: 1px solid $dark-grey;
-$hairline: 1px solid $grey;
-$redline: 1px solid $red;
-$whiteline: 1px solid $white;
+$rule: 1px solid $text;
+$hairline: 1px solid $mid-text;
+$accentline: 1px solid $accent;
+$whiteline: 1px solid $background;
 
 
 // Default border radius

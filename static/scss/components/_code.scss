@@ -19,26 +19,26 @@ pre{
     overflow:auto;
     padding:rem($line);
     margin-bottom: rem($line);
-    color:$white;
+    color:$background;
     width:100%;
 }
 
 code {
     font-family: $mono;
-    color:$white;
+    color:$background;
 }
 
 // Code comments
 // EG) <code>&lt;/div&gt;<span class="code__comment">&lt;!-- Nice comment, dude. --&gt;</span></code>
 .code__comment{
-    color: $grey;
+    color: $mid-text;
 }
 
 //  Numbered code blocks. Ugly code, but works well.
 //
 //   <ol class="line-numbers">
 //           <li><code>.object {</code></li>
-//           <li><code>    color: $white;</code></li>
+//           <li><code>    color: $background;</code></li>
 //           <li><code>    margin: $line;</code></li>
 //           <li><code>}</code></li>
 //   </ol>
