@@ -13,7 +13,7 @@
   "preprocessorLocations": "static",
   "preprocessorScriptOutput": "assets/js",
   "preprocessorStyleOutput": "assets/css",
-  "projectDescription": "A Mixture for building Agnostic.io UI kits",
+  "projectDescription": "A Mixture boilerplate for building Agnostic.io UI kits",
   "projectName": "Agnostic",
   "publishedId": null,
   "sass": {

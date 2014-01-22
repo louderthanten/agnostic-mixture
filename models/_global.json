@@ -1,10 +1,16 @@
 {
-    "title": "",
-    "tagline": "",
+    "title": "Agnostic",
+    "tagline": "A Mixture boilerplate for building Agnostic.io UI kits",
+    "cover": "",
+    "author": "",
+    "avatar": "",
+    "bio": "",
+    "location": "",
     "twitter": "louderthanten",
+    "website": "http://louderthanten.com",
     "googleanalytics": "",
     "domain": "http://www.agnostic.io",
-    "email": "support@agnostic.io",
+    "email": "trav@louderthanten.com",
     "typekitID": "",
     "googlefontsEmbed": ""
 }
