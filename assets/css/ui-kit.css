@@ -1,5 +1,6 @@
 /* [sass, static/scss, ui-kit.scss] */
 *, *:before, *:after {
+  -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
 .ir {

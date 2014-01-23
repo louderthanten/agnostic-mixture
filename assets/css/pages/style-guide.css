@@ -106,7 +106,6 @@ nav ul > li a {
   padding-left: 0.75rem;
   padding-right: 12px;
   padding-right: 0.75rem;
-  -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
@@ -150,7 +149,6 @@ nav ul > li a {
   padding-left: 0.75rem;
   padding-right: 12px;
   padding-right: 0.75rem;
-  -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
@@ -231,7 +229,6 @@ nav ul > li a {
     padding-left: 0.75rem;
     padding-right: 12px;
     padding-right: 0.75rem;
-    -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     -o-box-sizing: border-box;
     box-sizing: border-box;
@@ -256,7 +253,6 @@ nav ul > li a {
     padding-left: 0.75rem;
     padding-right: 12px;
     padding-right: 0.75rem;
-    -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     -o-box-sizing: border-box;
     box-sizing: border-box;
@@ -304,3 +300,4 @@ nav ul > li a {
     clear: both;
   }
 }
+
