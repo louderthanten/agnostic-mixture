@@ -1541,37 +1541,96 @@ blockquote {
 
 
 
-pre {
-  overflow: auto; }
-  pre mark {
-    background: none;
-    border-bottom: 1px solid;
-    color: inherit; }
-
-.code-block {
-  overflow: auto;
-  padding: 1.5rem;
-  margin-bottom: 1.5rem;
+code, pre {
+  background: #333333;
   color: #FFFFFF;
-  width: 100%; }
+  font-family: Consolas, Monaco, 'Andale Mono', monospace;
+  direction: ltr;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  tab-size: 4;
+  hyphens: none; }
 
-code {
-  font-family: monospace;
+pre::-moz-selection, pre ::-moz-selection, code::-moz-selection, code ::-moz-selection {
+  background: red;
   color: #FFFFFF; }
 
-.code__comment {
+pre::selection, pre ::selection, code::selection, code ::selection {
+  background: red;
+  color: #FFFFFF; }
+
+pre {
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  overflow: auto; }
+  pre > code {
+    margin: 0; }
+
+:not(pre) > code {
+  background: #FFFFFF;
+  color: #333333;
+  padding: 1.5rem; }
+
+.token.comment, .token.prolog, .token.doctype, .token.cdata {
   color: #999999; }
 
-.line-numbers {
-  font-family: monospace;
-  list-style: decimal-leading-zero inside;
-  white-space: nowrap;
-  overflow: auto;
-  margin-left: 0;
-  margin-bottom: 0; }
+.token.punctuation {
+  color: #999999; }
 
-.line-numbers code {
-  white-space: pre; }
+.namespace {
+  opacity: 0.7; }
+
+.token.property, .token.tag, .token.boolean, .token.number, .token.constant, .token.symbol {
+  color: #999999; }
+
+.token.selector, .token.attr-name, .token.string, .token.builtin {
+  color: #FFFFFF; }
+
+.token.operator, .token.entity, .token.url, .language-css .token.string, .style .token.string, .token.variable {
+  color: red; }
+
+.token.atrule, .token.attr-value, .token.keyword {
+  color: #FFFFFF; }
+
+.token.regex, .token.important {
+  color: red; }
+
+.token.important {
+  font-weight: 700; }
+
+.token.entity {
+  cursor: help; }
+
+pre.line-numbers {
+  position: relative;
+  counter-reset: linenumber; }
+
+pre.line-numbers > code {
+  position: relative; }
+
+.line-numbers .line-numbers-rows {
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  left: -1.5rem;
+  width: 3rem;
+  /* works for line-numbers below 1000 lines */
+  border-right: 1px solid #999999;
+  user-select: none; }
+
+.line-numbers-rows > span {
+  pointer-events: none;
+  display: block;
+  counter-increment: linenumber; }
+
+.line-numbers-rows > span:before {
+  content: counter(linenumber);
+  color: #999999;
+  display: block;
+  padding-right: 0.75rem;
+  text-align: right; }
 
 img {
   max-width: 100%;
@@ -1626,7 +1685,7 @@ figcaption .source {
     .callout .content > *:first-child, .callout .content > *:first-child > *:first-child, .callout .content > *:first-child > *:first-child > *:first-child {
       margin-top: 0 !important; }
 
-.reverse, .code-block {
+.reverse {
   background: #333333;
   color: #FFFFFF; }
 

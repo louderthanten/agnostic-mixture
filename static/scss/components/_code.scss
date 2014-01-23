@@ -1,59 +1,151 @@
 // CODE
 
-// For pretty code blocks. Lot's of great hints taken from the fabulous Inuit Framework. http://inuitcss.com/
+// We use Prism.js to add syntax highlighting and line numbers. Visit http://prismjs.com/ to configure the languages and plugins you require.
 
-pre{
-    overflow:auto;
+// Default code block styling
+code,
+pre {
+    @extend .small;
+    background:$text;
+    color: $background;
+    font-family: $mono;
+    direction: ltr;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    tab-size: 4;
+    hyphens: none;
+}
 
-    mark {
-        background:none;
-        border-bottom:1px solid;
-        color:inherit;
+
+// Make selected text in code distinct from surrounding text
+pre::-moz-selection,
+pre ::-moz-selection,
+code::-moz-selection,
+code ::-moz-selection {
+    background: $accent;
+    color:$background;
+}
+pre::selection,
+pre ::selection,
+code::selection,
+code ::selection {
+    background: $accent;
+    color:$background;
+}
+
+// Code blocks
+pre {
+    padding:rem($line);
+    margin-bottom: rem($line);
+    overflow: auto;
+    > code {
+        margin:0;
     }
 }
 
 
-// Default code blocks. I'm extending the .reverse class  to apply a reversed color style. Do what you want.
-.code-block {
-    @extend .reverse;
-    overflow:auto;
+//Inline code
+:not(pre) > code {
+    background: $background;
+    color:$text;
     padding:rem($line);
-    margin-bottom: rem($line);
-    color:$background;
-    width:100%;
 }
 
-code {
-    font-family: $mono;
-    color:$background;
-}
 
-// Code comments
-// EG) <code>&lt;/div&gt;<span class="code__comment">&lt;!-- Nice comment, dude. --&gt;</span></code>
-.code__comment{
+// Code colors
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
     color: $mid-text;
 }
 
-//  Numbered code blocks. Ugly code, but works well.
-//
-//   <ol class="line-numbers">
-//           <li><code>.object {</code></li>
-//           <li><code>    color: $background;</code></li>
-//           <li><code>    margin: $line;</code></li>
-//           <li><code>}</code></li>
-//   </ol>
-
-
-.line-numbers {
-    font-family: $mono;
-    list-style:decimal-leading-zero inside;
-    white-space:nowrap;
-    overflow:auto;
-    margin-left:0;
-    margin-bottom: 0;
+.token.punctuation {
+    color: $mid-text;
 }
 
-// Forces whitespace so it acts like real code.
-.line-numbers code{
-    white-space:pre;
+.namespace {
+    opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol {
+    color: $mid-text;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.builtin {
+    color: $background;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+    color: $accent;
+    //background: hsla(0,0%,100%,.5);
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+    color: $background;
+}
+
+
+.token.regex,
+.token.important {
+    color: $accent;
+}
+
+.token.important {
+    font-weight: $bold;
+}
+
+.token.entity {
+    cursor: help;
+}
+
+// Add line numbers to <pre> blocks with a line-numbers class
+pre.line-numbers {
+    position: relative;
+    counter-reset: linenumber;
+}
+
+pre.line-numbers > code {
+    position: relative;
+}
+
+.line-numbers .line-numbers-rows {
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    left: rem($line*-1);
+    width: rem($line*2); /* works for line-numbers below 1000 lines */
+    border-right: $hairline;
+    user-select: none;
+}
+
+.line-numbers-rows > span {
+    pointer-events: none;
+    display: block;
+    counter-increment: linenumber;
+}
+
+.line-numbers-rows > span:before {
+    content: counter(linenumber);
+    color: $mid-text;
+    display: block;
+    padding-right: rem($line/2);
+    text-align: right;
 }

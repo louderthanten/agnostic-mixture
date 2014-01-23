@@ -232,34 +232,36 @@
 <section class="row">
     <div class="container">
         <h2>Code</h2>
-        <div class="code-block">
-            <ol class="line-numbers">
-                <li><code><span class="code__comment">/* Code comment */</span></code></li>
-                <li><code>.nav{</code></li>
-                <li><code>    list-style:none;</code></li>
-                <li><code>    margin-left:0;</code></li>
-                <li><code>}</code></li>
-                <li><code>    .nav > li,</code></li>
-                <li><code>        .nav > li > a{</code></li>
-                <li><code>            display:inline-block;</code></li>
-                <li><code>           *display:inline-block;</code></li>
-                <li><code>            zoom:1;</code></li>
-                <li><code>        }</code></li>
-            </ol>
-        </div>
+        <p>We use Prism.js to add syntax highlighting and line numbers. Visit <a href="http://prismjs.com/">Prism.js</a> to configure the languages and plugins you require.</p>
+        <section class="code-blocks">
+        <pre class="line-numbers language-css"><code>    /* Code comment */
+    .nav {
+        list-style:none;
+        margin-left:0;
+
+        > li,
+        > li > a {
+            display:inline-block;
+           *display:inline-block;
+            zoom:1;
+        }
+    }</code></pre>
 
         <h3>Markup example:</h3>
-        <div class="code-block">
-            <ol class="line-numbers">
-                <li><code><span class="code__comment">/* Code comment */</span></code></li>
-                <li><code>&lt;div class="code-block"&gt;</code></li>
-                <li><code>  &lt;ol class="line-numbers"&gt;</code></li>
-                <li><code>      &lt;li&gt;&lt;code&gt;&amp;lt;p&amp;gt;Code Example&amp;lt;/p&amp;gt;&lt;/code&gt;&lt;/li&gt;</code></li>
-                <li><code>      &lt;li&gt;&lt;code&gt;&amp;lt;p&amp;gt;Another&amp;lt;/p&amp;gt;&lt;/code&gt;&lt;/li&gt;</code></li>
-                <li><code>  &lt;/ol&gt;</code></li>
-                <li><code>&lt;/div&gt;</code></li>
-            </ol>
-        </div>
+        <pre class="line-numbers language-markup"><code>    &lt;pre class="language-css line-numbers"&gt;&lt;code&gt;/* Code comment */
+    .nav {
+        list-style:none;
+        margin-left:0;
+
+        > li,
+        > li > a {
+            display:inline-block;
+           *display:inline-block;
+            zoom:1;
+        }
+    }&lt;/code&gt;&lt;/pre&gt;</code></pre>
+        </section>
+
 
     </div>
 </section>

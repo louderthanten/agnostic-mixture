@@ -10,7 +10,7 @@
   "domain": null,
   "lintScripts": false,
   "modelSource": null,
-  "preprocessorLocations": "static",
+  "preprocessorLocations": "static,assets",
   "preprocessorScriptOutput": "assets/js",
   "preprocessorStyleOutput": "assets/css",
   "projectDescription": "A Mixture boilerplate for building Agnostic.io UI kits",
