@@ -14,7 +14,6 @@
     margin-bottom: rem($line*2);
     text-align: left;
     cursor: pointer;
-    background:$text;
 
     .ui-slider-handle {
         position: absolute;
@@ -24,6 +23,5 @@
         z-index: 2;
         cursor: pointer;
         outline: none;
-        background:$accent;
     }
 }

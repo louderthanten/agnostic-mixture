@@ -7,6 +7,16 @@
 @import "vendor/normalize";
 @import "vendor/jquery-ui";
 
+// Theme colours
+@import "theme/layout";
+@import "theme/text";
+//@import "theme/icons";
+//@import "theme/navigation";
+@import "theme/code";
+@import "theme/forms";
+@import "theme/special-fields";
+//@import "theme/offcanvas";
+
 // Global styles
 @import "global/helpers";
 @import "global/paragraphs";

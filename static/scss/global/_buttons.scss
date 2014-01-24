@@ -20,45 +20,19 @@ a.button {
     text-align:center;
     text-decoration: none;
     cursor:pointer;
-    background:$text;
-    color:$background;
 
     &:link,
     &:visited {
-
     }
 
     &:hover {
-        background:$accent;
-        color:$background;
     }
 
     &:active,
     &:focus {
-        background:$accent;
-        color:$background;
     }
 }
 
-// Add color variations here
-.button--red,
-a.button--red {
-    background:$accent;
-
-    &:link,
-    &:visited {
-        background:$accent;
-    }
-
-    &:hover {
-        background: $mid-text;
-    }
-
-    &:active,
-    &:focus {
-
-    }
-}
 
 // Disabled button styles
 a.button--disabled,
@@ -69,7 +43,6 @@ a.button--disabled:focus,
 .button--disabled:hover,
 .button--disabled:active,
 .button--disabled:focus {
-    background:$mid-text;
     cursor: default;
 }
 

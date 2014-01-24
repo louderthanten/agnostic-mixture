@@ -1,0 +1,65 @@
+// CODE COLORS
+
+code,
+pre {
+    @include selected($background, $text);
+    background:$dark-background;
+    color: $accent;
+}
+
+//Inline code
+:not(pre) > code {
+    background: $dark-background;
+    color:$text;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+    color: $light-text;
+}
+
+.token.punctuation {
+    color: $mid-text;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol {
+    color: $text;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.builtin {
+    color: $accent;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+    color: $accent;
+    //background: hsla(0,0%,100%,.5);
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+    color: $accent;
+}
+
+.token.regex,
+.token.important {
+    color: $accent;
+}
+.line-numbers-rows > span:before {
+    color: $light-text;
+}

@@ -49,10 +49,6 @@ label,
     left:0;
     bottom:0;
 }
-.error {
-    color:$accent;
-}
-
 
 
 //    Text inputs. Another hat tip to Inuit for the text-input class idea. http://inuitcss.com/
@@ -65,7 +61,6 @@ label,
 
 .text-input {
     -webkit-appearance: none;
-    @include placeholder-color($text);
     width:100%;
     outline:none;
 

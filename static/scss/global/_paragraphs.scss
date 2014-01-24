@@ -62,10 +62,5 @@ sub {
     bottom: -.5ex;
 }
 
-.highlight  {
-    background: yellow;
-}
 
-// Don't forget selected text styles
-::-moz-selection { background: blue; color: white; text-shadow: none; }
-::selection { background: blue; color: white; text-shadow: none; }
+

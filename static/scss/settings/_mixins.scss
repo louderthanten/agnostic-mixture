@@ -29,6 +29,12 @@ $em: $base * 1;
     }
 }
 
+// Adjust selected text colors
+@mixin selected($txt, $bg) {
+    ::-moz-selection { background: $bg; color: $txt;}
+    ::selection { background: $bg; color: $txt;}
+}
+
 // Supply @2x background images to browsers that support background-size
 @mixin image-2x($image, $width, $height) {
     @media (min--moz-device-pixel-ratio: 1.3),
