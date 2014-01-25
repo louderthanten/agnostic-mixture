@@ -1,8 +1,15 @@
 # Your javascript goes here
 $ ->
 
-    #Wrap inline videos in video iframes so they are responsive
-    $('iframe').wrap '<figure class="video"></figure>'
+    # Wrap inline videos and maps in flexible figures so they are responsive
+    $('.content > iframe').each ->
+        source = $(@).attr 'src'
+        map = /maps.google/
+        isMap = map.test(source)
+        if(isMap)
+            $(@).wrap '<figure class="map"></figure>'
+        else
+            $(@).wrap '<figure class="video"></figure>'
 
     #wrap inline images in figure tags so they are responsive
     $('.content img').wrap '<figure></figure>'
