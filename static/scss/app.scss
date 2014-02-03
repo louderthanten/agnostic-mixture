@@ -1,53 +1,5 @@
-// Variables, Mixins, and resets
-@import "settings/variables";
-@import "settings/functions";
-@import "settings/mixins";
+// Base theme colors
+@import "settings/colors";
 
-// Vendor styles
-@import "vendor/normalize";
-@import "vendor/jquery-ui";
-
-// Theme colours
-@import "theme/layout";
-@import "theme/text";
-//@import "theme/icons";
-//@import "theme/navigation";
-@import "theme/code";
-@import "theme/forms";
-@import "theme/special-fields";
-
-// Global styles
-@import "global/helpers";
-@import "global/paragraphs";
-@import "global/headings";
-@import "global/smallprint";
-@import "global/time-stamps";
-@import "global/links";
-@import "global/lists";
-@import "global/borders";
-@import "global/icons";
-@import "global/buttons";
-@import "global/forms";
-@import "global/tables";
-@import "global/animation";
-
-// UI Components
-@import "components/quotes";
-@import "components/code";
-@import "components/images";
-@import "components/maps";
-@import "components/videos";
-@import "components/callouts";
-@import "components/drawers";
-@import "components/breadcrumbs";
-@import "components/pagination";
-@import "components/switches";
-@import "components/option-buttons";
-@import "components/sliders";
-@import "components/gallery";
-@import "components/vcards";
-
-// UI Modules
-@import "modules/header";
-@import "modules/footer";
-@import "modules/layout";
+// Includes
+@import "settings/includes";

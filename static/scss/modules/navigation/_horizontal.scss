@@ -1,0 +1,36 @@
+.horizontal-nav {
+    ul {
+        @extend %group;
+        padding:0;
+        margin-bottom: 0;
+    }
+    li {
+        border-bottom: $whiteline;
+    }
+    a {
+        display: block;
+        width:100%;
+        padding:rem($line/4) $margin;
+        font-family: $serif;
+    }
+}
+
+@media only screen and (min-width: $screenSmall) {
+    .horizontal-nav {
+        ul {
+        }
+        li {
+            float:left;
+            border:none;
+        }
+        a {
+            padding:rem($line/2.5 $line $line/3 $line);
+        }
+    }
+    .horizontal-nav--center {
+        ul {
+            display: table;
+            margin: 0 auto;
+        }
+    }
+}

@@ -1,0 +1,18 @@
+// Tabs
+.tabs {
+    ul {
+        padding:0;
+    }
+    li {
+        @include gutter;
+        padding:0;
+        display: inline-block;
+        width:auto;
+    }
+    a {
+        display:block;
+    }
+    .active a {
+
+    }
+}

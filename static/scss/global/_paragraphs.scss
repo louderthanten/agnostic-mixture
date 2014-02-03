@@ -2,6 +2,25 @@
 
 // Modular scales are your friend, my friend: http://modularscale.com  |  https://vimeo.com/17079380
 
+.wf-loading {
+    .logo,
+    p,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    li,
+    dt,
+    dd,
+    td,
+    th,
+    small {
+        visibility: hidden !important;
+    }
+}
+
 body {
     @include font-size;
     font-family: $serif;
